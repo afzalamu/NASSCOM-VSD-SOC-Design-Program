@@ -73,6 +73,18 @@ After the preparation is complete, we can see a new directory with todays date i
 ![9](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/cb3cefd1-145a-4a08-b203-4fbf564ce584)
 
 ### Review files after design prep and run synthesis
+Now, when we open the newly created directory:
+![10](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/b414945d-dc0d-47b2-8e64-5ffa6167f2c9)
+
+At first, every directory will be empty since no operations have been performed on the design. However, there will be a directory named "tmp" that contains various types of files. One of these files is "merged.lef" which includes information about metal layer levels and cell levels.
+
+![11](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/b0504629-bdac-4fe8-b056-068a8184404f)
+use the follwoing command to open "merged.lef":
+```
+less merged.lef
+```
+
+
 
 
 
