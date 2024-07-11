@@ -41,7 +41,10 @@ cd openlane_working_dir/
           - libs.tech: It contains files specific to the Tools.
   ```
 
-
+Now, we under 'libs.ref' we go to :
+```
+cd sky130_fd_sc_hdll
+```
     
 
 
