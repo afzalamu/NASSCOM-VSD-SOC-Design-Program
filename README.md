@@ -66,6 +66,7 @@ To carry out the synthesis (the project's initial stage) on this design, we firs
 ```
 prep -design picorv32a
 ```
+![8](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/8345b349-097c-45cb-9478-0394c1b89054)
 
 
 
