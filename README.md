@@ -24,12 +24,16 @@ cd Desktop
 ```
 cd work/tools/
 ```
-we wil be working with 'openlane_working_dir' so use : 
+we wil be working with 'openlane_working_dir' --> 'openlane' so use : 
 
 ```
 cd openlane_working_dir/
 ```
-![5](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/cce17ef1-19d8-4129-98ec-b658086c92f7)
+```
+cd openlane/
+```
+![6](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/0d142dcd-3b98-4639-a480-99cb7a256544)
+
 
 - Important Files and Directories
   ```
@@ -40,12 +44,7 @@ cd openlane_working_dir/
           - libs.ref: It contains files specific to the technology such as design libraries, standard cells and many more.
           - libs.tech: It contains files specific to the Tools.
   ```
-
-Now, we under 'libs.ref' we go to :
-```
-cd sky130_fd_sc_hdll
-```
-    
+  
 
 
 
