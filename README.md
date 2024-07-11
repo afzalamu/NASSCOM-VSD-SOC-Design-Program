@@ -15,6 +15,18 @@ Open the LINUX Terminal (By default we are in home directory)
   - ls --help: It displays a help message with a list of options and usage information for the "ls" command.
      Note : You can give any command name and then type "--help" to get info about that command.
   - clear: It clears the terminal screen.
+ 
+
+Now, We go to the  work directory where all files related to the workshop are stored
+```
+cd Desktop
+```
+```
+cd work/tools
+```
+![3](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/e3048827-5036-49c6-b612-e1af8cd188f4)
+![4](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/a5be8fcd-20fa-478b-849c-f4b7c84edc7b)
+
     
 
 
