@@ -71,6 +71,8 @@ prep -design picorv32a
 After the preparation is complete, we can see a new directory is created within 'runs' folder in 'picorv32a' folder.
 ![9](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/cb3cefd1-145a-4a08-b203-4fbf564ce584)
 
+###Review files after design prep and run synthesis
+
 
 
 
