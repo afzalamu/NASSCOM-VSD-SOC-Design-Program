@@ -130,6 +130,8 @@ Also, Now if we go to:
 ```
 /work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-07_06-37/results/synthesis$
 ```
+![16](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/5ab1a9f4-ca35-49cb-a4e8-58526278d6d6)
+
 we have the synthesis results stored here now.
 
 
