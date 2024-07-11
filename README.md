@@ -101,6 +101,10 @@ Now, To perform synthesis on the design use the following command :
 ![a](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/b67df7ad-3abc-46e7-9b84-c8f64b816aee)
 It will take some time to get completed.
 
+* Extras: Watch these videos
+  * [Fossi Dial Up : Skywater 130nm PDK](https://www.youtube.com/live/EczW2IWdnOM?si=OPWnxYsm_Q6uZhyS)
+  * [Fossi Dial Up : Openlane Digital ASIC flow]([https://www.youtube.com/live/EczW2IWdnOM?si=OPWnxYsm_Q6uZhyS](https://www.youtube.com/live/Vhyv0eq_mLU?si=S8MLr6hHwYO8-JVp)) 
+
 
 
 
