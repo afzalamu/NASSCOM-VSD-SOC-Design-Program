@@ -29,6 +29,19 @@ cd work/tools/
 
 we wil be working with 'openlane_working_dir' so use : 
 ``` cd openlane_working_dir/```
+![5](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/cce17ef1-19d8-4129-98ec-b658086c92f7)
+
+- Important Files and Directories
+  ```
+   -pdks: It is known as Process Design Kit. For this workshop we are using an opensource pdk i.e 'skywater 130nm pdk'. OPENLANE is built around this 'skywater 130nm pdk'.
+    -- skywater-pdk : This has all the pdk related files such as timing libraries, Lef files etc.
+    -- open_pdks : It contains set of scripts & files that converts the foundary level pdks to be compatible with the open source EDA Tools.
+    -- sky130A : It is a pdk variant , alreday made compatible with the open source EDA tools.
+        --- libs.ref:
+  
+  
+  ```
+
 
     
 
