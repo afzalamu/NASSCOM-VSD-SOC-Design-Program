@@ -54,8 +54,18 @@ Now after this we use the script 'flow.tcl' and alongwith it use '-interactive' 
 ```
 ./flow.tcl -interactive
 ```
-
-
+![7](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/823cdab4-9c21-4edd-b7c2-1a546c4f36a9)
+.
+Now, OPENLANE is opened, and we input the required packages using the following command:
+```
+% package require openlane 0.9
+```
+Now, Ther are various pre-built designs in the 'designs' subdirectory.
+So, here we are selecting the "picorv32a.v" design on which we will execute the RTL to GDS flow.
+To carry out the synthesis (the project's initial stage) on this design, we first need to set it up using the command:
+```
+prep -design picorv32a
+```
 
 
 
