@@ -22,16 +22,8 @@ We will be designing this microprocessor from the abstract level to the fabricat
 | **IPs** | Foundry IPs require manual design or human intervention to create, such as components  ADC, DAC, PLLs and may more.|
 
 ### SOC DESIGN USING OPENLANE
-
-
-
-
-
-
-
-
-
-
+Here is the OpenLANE Detailed ASIC Design Flow:
+![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/8e45d006-cccb-429e-a3c1-35e275cf86e9)
 
 
 ## DAY1 LABS : GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS 
