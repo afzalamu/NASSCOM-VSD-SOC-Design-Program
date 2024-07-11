@@ -4,7 +4,7 @@
 ## Table of Contents
 - [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
   - [What is an RTL to GDSII flow?](#what-is-an-rtl-to-gdsii-flow)
-  - [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](##insight-into-the-qfn-48-chip-pads-core-die-and-ip-components)
+  - [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](#insight-into-the-qfn-48-chip-pads-core-die-and-ip-components)
   - [IC Design Components and Terminologies](#ic-design-components-and-terminologies)
 - [SOC DESIGN USING OPENLANE](#soc-design-using-openlane)
   - [OpenLANE Detailed ASIC Design Flow](#openlane-detailed-asic-design-flow)
