@@ -7,7 +7,7 @@ The image below is an Arduino Microcontroller Board. Our focus is on the encircl
 We will be designing this microprocessor from the abstract level to the fabrication level using the RTL to GDS flow. 
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/d4f23775-c0c2-4f05-a198-9235b756aafe)
 
-***let us Understand about somem IC Design Components and Terminologies***
+***let us Understand about some IC Design Components and Terminologies***
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/fd2d6097-a140-4f37-868c-bb49447cb385)
 
 
