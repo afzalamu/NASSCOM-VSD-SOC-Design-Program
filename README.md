@@ -84,6 +84,15 @@ use the follwoing command to open "merged.lef":
 ```
 less merged.lef
 ```
+- "config.tcl" File: This file shows which all default parameter is taken by the run.
+- ![12](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/80333993-1e56-4c7c-9bf8-feeb4fd8b307)
+  To open the file use the following command:
+  ```
+  less config.tcl
+  ```
+  ![13](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/fac38ff5-c389-4cfa-8e9f-bf5de455b0f0)
+
+
 
 
 
