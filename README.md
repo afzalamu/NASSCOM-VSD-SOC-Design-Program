@@ -1,3 +1,21 @@
+
+# NASSCOM-VSD-SOC-Design-Program
+
+## Table of Contents
+- [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
+  - [What is an RTL to GDSII flow?](#what-is-an-rtl-to-gdsii-flow)
+  - [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](#insight-into-the-qfn-48-chip--pads-core-die-and-ip-components)
+  - [IC Design Components and Terminologies](#ic-design-components-and-terminologies)
+- [SOC DESIGN USING OPENLANE](#soc-design-using-openlane)
+  - [OpenLANE Detailed ASIC Design Flow](#openlane-detailed-asic-design-flow)
+- [DAY1 LABS: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS](#day1-labs--getting-familiar-with-open-source-eda-tools)
+  - [Understanding OPENLANE Directory Structure](#understanding-openlane-directory-structure)
+  - [Design Preparation Step](#design-preparation-step)
+  - [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
+  - [Characterization of Synthesized Results](#characterization-of-synthesized-results)
+
+
+
 # NASSCOM-VSD-SOC-Design-Program
 
 ## DAY1 THEORY : Open-source EDA, OpenLANE and Sky130 PDK
