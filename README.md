@@ -93,7 +93,7 @@ less merged.lef
   ![13](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/fac38ff5-c389-4cfa-8e9f-bf5de455b0f0)
 
 
-Now, coming abck to the step where design preperation was completed successfully.
+Now, coming back to the step where design preperation was completed successfully.
 Now, To perform synthesis on the design use the following command :
 ```
 % run_synthesis
