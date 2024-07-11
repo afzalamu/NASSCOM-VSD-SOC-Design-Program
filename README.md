@@ -103,7 +103,7 @@ It will take some time to get completed.
 
 * Extras: Watch these videos
   * [Fossi Dial Up : Skywater 130nm PDK](https://www.youtube.com/live/EczW2IWdnOM?si=OPWnxYsm_Q6uZhyS)
-  * [Fossi Dial Up : Openlane Digital ASIC flow](https://www.youtube.com/live/EczW2IWdnOM?si=OPWnxYsm_Q6uZhyS](https://www.youtube.com/live/Vhyv0eq_mLU?si=S8MLr6hHwYO8-JVp) 
+  * [Fossi Dial Up : Openlane Digital ASIC flow](https://www.youtube.com/live/Vhyv0eq_mLU?si=uAuQ8_DU5NJ-uKy2)
 
 
 
