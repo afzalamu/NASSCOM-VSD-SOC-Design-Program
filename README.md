@@ -50,6 +50,10 @@ To enter into bash while being in the openalne dircetory use the command
 ```
 docker
 ```
+Now after this we use the script 'flow.tcl' and alongwith it use '-interactive' for the step by step openlane flow. here is the command:
+```
+./flow.tcl -interactive
+```
 
 
 
