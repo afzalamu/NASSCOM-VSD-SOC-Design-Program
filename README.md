@@ -4,3 +4,5 @@
 ### Understanding OPENLANE Directory Structure 
 
 Open the LINUX Terminal (By default we are in home directory)
+
+- Important LINUX Commands
