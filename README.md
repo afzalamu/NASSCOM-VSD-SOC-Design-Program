@@ -21,7 +21,7 @@ We will be designing this microprocessor from the abstract level to the fabricat
 | **Die** | The die is the part of the chip that includes both the core and IO pads. It is the area that is implemented on silicon wafer|
 | **IPs** | Foundry IPs require manual design or human intervention to create, such as components  ADC, DAC, PLLs and may more.|
 
-### Introduction to RISCV
+### SOC DESIGN USING OPENLANE
 
 
 
