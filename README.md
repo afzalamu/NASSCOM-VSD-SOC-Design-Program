@@ -10,8 +10,6 @@ We will be designing this microprocessor from the abstract level to the fabricat
 ***let us Understand about some IC Design Components and Terminologies***
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/fd2d6097-a140-4f37-868c-bb49447cb385)
 
-Here's a table format for your GitHub README file:
-
 | **Component** | **Description** |
 |---------------|-----------------|
 | **Core** | The core is the section of the chip where the primary logic resides.|
