@@ -98,6 +98,8 @@ Now, To perform synthesis on the design use the following command :
 ```
 % run_synthesis
 ```
+![a](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/b67df7ad-3abc-46e7-9b84-c8f64b816aee)
+It will take some time to get completed.
 
 
 
