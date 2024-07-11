@@ -1,4 +1,16 @@
 # NASSCOM-VSD-SOC-Design-Program
+
+## DAY1 THEORY : Open-source EDA, OpenLANE and Sky130 PDK
+
+### Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components
+
+
+
+
+
+
+
+
 ## DAY1 LABS : GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS 
 
 ### Understanding OPENLANE Directory Structure 
