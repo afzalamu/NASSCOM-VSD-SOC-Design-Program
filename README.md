@@ -126,8 +126,11 @@ FF Ratio : 0.1084
 FF Percentage : 10.84 %
 ```
 
-
-
+Also, Now if we go to:
+```
+/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-07_06-37/results/synthesis$
+```
+we have the synthesis results stored here now.
 
 
 
