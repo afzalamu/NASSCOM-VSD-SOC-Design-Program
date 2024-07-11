@@ -106,6 +106,28 @@ It will take some time to get completed.
   * [Fossi Dial Up : Openlane Digital ASIC flow](https://www.youtube.com/live/Vhyv0eq_mLU?si=uAuQ8_DU5NJ-uKy2)
 
 
+### Characterization of Synthesized Results
+
+Now, First objective after the synthesis is completed is to calculate the Flip Flop Ratio.
+
+Now, if we see the synthesized results we find:
+![14](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/1424f56e-75c6-499c-bf8b-c9efc962972b)
+
+
+```
+Number of D Flipflops : 1613
+Total number of Cells : 14876
+```
+Hence, flip flop ratio = (Number of D Flipflops)/(Total number of Cells)
+Flipflop percentage = FF ratio * 100
+![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/02d72bf5-9c3a-4f8d-aa3d-96922f6139da)
+```
+FF Ratio : 0.1084
+FF Percentage : 10.84 %
+```
+
+
+
 
 
 
