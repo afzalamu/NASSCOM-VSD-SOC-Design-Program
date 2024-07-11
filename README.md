@@ -26,7 +26,9 @@ cd work/tools/
 ```
 we wil be working with 'openlane_working_dir' so use : 
 
-``` cd openlane_working_dir/```
+```
+cd openlane_working_dir/
+```
 ![5](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/cce17ef1-19d8-4129-98ec-b658086c92f7)
 
 - Important Files and Directories
