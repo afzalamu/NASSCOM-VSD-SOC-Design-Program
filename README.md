@@ -45,6 +45,11 @@ cd openlane/
           - libs.tech: It contains files specific to the Tools.
   ```
   
+### Design Preperation Step
+To enter into bash while being in the openalne dircetory use the command
+```
+docker
+```
 
 
 
