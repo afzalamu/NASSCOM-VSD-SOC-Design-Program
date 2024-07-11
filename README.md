@@ -20,7 +20,7 @@
 
 ## DAY1 THEORY : Open-source EDA, OpenLANE and Sky130 PDK
 
-**What is an RTL to GDSII flow?**
+###What is an RTL to GDSII flow?**
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/8781543a-f108-4821-a3e9-45f1d8d5dd93)
 The RTL (Register Transfer Level) to GDSII (Graphic Data System II) flow is a comprehensive process in integrated circuit (IC) design that transforms a high-level hardware description into a physical layout ready for fabrication. It begins with RTL design, where the circuit's functionality is coded in hardware description languages like Verilog or VHDL. This RTL code is then synthesized into a gate-level netlist. Design for Test (DFT) features are incorporated to facilitate testing. The netlist undergoes floorplanning, placement, and routing to map the circuit onto the chip layout. Clock Tree Synthesis (CTS) ensures efficient clock distribution. After detailed placement and routing, signoff checks including Design Rule Checking (DRC), Layout Versus Schematic (LVS) checks, and Static Timing Analysis (STA) are performed. Finally, the design is exported as a GDSII file, which is used by semiconductor foundries to fabricate the physical ICs
 
