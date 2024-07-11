@@ -2,6 +2,8 @@
 
 ## DAY1 THEORY : Open-source EDA, OpenLANE and Sky130 PDK
 
+**What is an RTL to GDSII flow?**
+
 ### Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components
 The image below is an Arduino Microcontroller Board. Our focus is on the encircled area, which contains the 'Microprocessor.
 We will be designing this microprocessor from the abstract level to the fabrication level using the RTL to GDS flow. 
