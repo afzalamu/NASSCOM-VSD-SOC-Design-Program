@@ -183,7 +183,7 @@ we have the synthesis results stored here now.
 
 ### CHIP FLOORPLANNING CONSIDERATIONS
 
-* UTILISATION FACTOR AND ASPECT RATIO
+#### UTILISATION FACTOR AND ASPECT RATIO
   
   In order to calculate the utilization factor & aspect ratio, first we need to calculate the height and width of the core and die.
   ![image](https://github.com/user-attachments/assets/638b2fc2-54c8-43f4-afad-183281247e6b)
@@ -218,7 +218,10 @@ Utilisation Factor = (4 sq units)/(8 sq units) = 0.5
 Aspect Ratio = (2 units)/(4 units) = 0.5 i.e core has Rectangular Shape
 ```
 
+#### CONCEPT OF PREPLACED CELLS
+![image](https://github.com/user-attachments/assets/ac8dc27f-1213-4814-bfb5-76ebae9fbd3c)
 
+The concept of preplaced cells involves organizing a complex combinational logic circuit, which can contain thousands of gates, into predefined locations within a layout. This approach begins with defining the locations of critical components or blocks within the circuit. By partitioning the logic into smaller blocks or modules, we can optimize the floorplan and streamline the routing of connections between them. These preplaced cells or blocks are then treated as distinct entities, often referred to as "black boxes," which can be managed separately as individual IPs or modules. This method enhances the design's manageability and efficiency, ensuring better performance and easier integration.
 
 
 
