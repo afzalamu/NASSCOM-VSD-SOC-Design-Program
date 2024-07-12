@@ -240,7 +240,17 @@ Automated Plcement and routing tools places the remaining logical cells in the d
 In circuits, certain high-power components may not receive adequate power from the source due to voltage drops in the connecting wires, causing their operation to fall outside their required voltage range for reliable switching. To address this issue, decoupling capacitors (De-cap cells) are strategically placed near these power-intensive components. These capacitors are connected to the power source and charge to a high level when no switching occurs. When switching activities commence, the decoupling capacitors quickly discharge to supply the necessary power directly to these components. Once switching ceases, the capacitors recharge, ensuring consistent and reliable power delivery to critical circuit components. This mechanism is essential in circuit design to maintain stable operation and prevent performance issues caused by fluctuating power supply conditions.
 
 #### CONCEPT OF POWER PLANNING
+In the previous section, we discussed using decoupling capacitors (De-cap cells) to manage power distribution for various blocks. However, De-cap cells come with limitations, such as leakage power and increased chip area. To mitigate these issues, we use a technique called power planning. In areas of the chip with significant switching activity, two phenomena can occur: voltage drop and ground bounce.
+![image](https://github.com/user-attachments/assets/77cef52e-a458-4a2f-bb3d-6e53b75bf932)
+**Voltage Drop**
+Voltage drop happens when a group of cells switch from 0 to 1 simultaneously, causing a high demand for power. If the power is supplied from a single source, there may be insufficient power, leading to a drop in input voltage at that location. This issue becomes problematic when the voltage level falls below the noise margin.
 
+**Ground Bounce**
+Ground bounce occurs when a group of cells switch from 1 to 0 simultaneously, dumping power to the ground pin at the same time. This causes the ground voltage to rise briefly instead of remaining at 0, leading to a phenomenon known as ground bounce. The issue arises when the voltage level exceeds the noise margin.
+
+**Power Planning Technique**
+![image](https://github.com/user-attachments/assets/b4859dea-2da9-4f12-b459-389bbdae8fa1)
+To prevent these issues, a technique called power planning is used. This involves creating two separate power meshes: one for Vdd (positive voltage) and another for ground. These meshes are typically implemented using the top two metal layers to minimize voltage drops. They are spread across the design and connected to multiple Vdd and ground sources. With this approach, when a cell requires power to switch from 0 to 1, it draws from the nearest Vdd layer. Conversely, when a cell needs to drain power, it discharges to the nearest ground layer. This ensures stable and efficient power distribution throughout the chip.
 
 
 ## DAY2 LABS: FLOORPLANNING
