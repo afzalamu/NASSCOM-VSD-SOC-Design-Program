@@ -297,7 +297,31 @@ Now, we can use 'Magic' tool to expllore the floorplan.
 
 ![8 what command](https://github.com/user-attachments/assets/5941e834-c4c9-48ee-9db3-a514dc51cb38)
 
-### LIBRARY BINDING AND PLACEMENTS
+### STEPS TO PERFORM PLACEMENT IN OPENLANE
+After successfully completing floorplanning, the design process moves on to the placement stage, which comprises two main phases:
+
+**Global Placement:**
+During this phase, the tool determines the approximate locations for all the standard cells in the design.
+**Detailed Placement:**
+In this phase, the tool finalizes the exact positions for all the standard cells and ensures the placement is legal. Legalization involves verifying that no standard cells overlap and that they are all correctly positioned within the designated site rows.
+To initiate the placement process, use the following command:
+```
+run_placement
+```
+![1 placement donw](https://github.com/user-attachments/assets/00b4b998-a96a-43ab-8018-a8ae6547f80f)
+
+After the Placement is done. To view the results Go to the following loacation:
+```
+~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/12-07_11-26/results/placement$
+```
+And then we can see 'picorv32a.placement.def' file. To open it using MAGIC use the follwoing command:
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def
+```
+![2 placement result magic](https://github.com/user-attachments/assets/c480ee72-2130-422a-8f1c-c4f403072830)
+![image](https://github.com/user-attachments/assets/6ffd41e9-d805-4da9-aa15-8f641046d05e)
+
+
 
 
 
