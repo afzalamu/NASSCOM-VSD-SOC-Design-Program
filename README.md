@@ -25,7 +25,6 @@
 
 
 
-# NASSCOM-VSD-SOC-Design-Program
 
 ## DAY1 THEORY : Open-source EDA, OpenLANE and Sky130 PDK
 
