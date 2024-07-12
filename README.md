@@ -268,6 +268,18 @@ Now, to open this "def" file in magic , use the following command:
 ```
 
 ![7 opening in magic](https://github.com/user-attachments/assets/14b20546-e434-4bad-93d1-6be3ea5fee71)
+Now, we can use 'Magic' tool to expllore the floorplan.
+
+# Design Alignment Instructions
+
+| **Task**                       | **Steps**                                                                                                         |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| **Centering the Design**       | 1. Press `S` to select the entire design.<br>2. Press `V` to align it vertically to the middle of the screen.       |
+| **Zooming In on a Specific Area** | 1. Left-click and drag to highlight the desired region.<br>2. Right-click to open the context menu.<br>3. Press `Z` to zoom in on the selected area. |
+| **Retrieving Cell Details**    | 1. Hover your cursor over the cell you want details for.<br>2. Press `S` to select the cell.<br>3. In the `tkcon` window, type the command `what` to display the cell's details. |
+
+
+
 
 
   
