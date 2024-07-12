@@ -16,6 +16,7 @@
     - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
     - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
     - [CONCEPT OF DECOUPLING CAPACITOR](#concept-of-decoupling-capacitor)
+    - [CONCEPT OF POWER PLANNING](#concept-of-power-planning)
 - [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
   - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
   - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
