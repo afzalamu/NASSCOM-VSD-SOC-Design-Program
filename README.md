@@ -11,7 +11,10 @@
   - [Design Preparation Step](#design-preparation-step)
   - [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
   - [Characterization of Synthesized Results](#characterization-of-synthesized-results)
-
+- [DAY2 THEORY: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#day2-theory--good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
+  - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
+    - [UTILISATION FACTOR AND ASPECT RATIO](#utilisation-factor-and-aspect-ratio)
+    - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
 
 
 # NASSCOM-VSD-SOC-Design-Program
