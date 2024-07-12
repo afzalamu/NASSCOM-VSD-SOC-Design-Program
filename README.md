@@ -186,7 +186,7 @@ we have the synthesis results stored here now.
 
 ### CHIP FLOORPLANNING CONSIDERATIONS
 
-#### UTILISATION FACTOR AND ASPECT RATIO
+#### UTILIZATION FACTOR AND ASPECT RATIO
   
   In order to calculate the utilization factor & aspect ratio, first we need to calculate the height and width of the core and die.
   ![image](https://github.com/user-attachments/assets/638b2fc2-54c8-43f4-afad-183281247e6b)
