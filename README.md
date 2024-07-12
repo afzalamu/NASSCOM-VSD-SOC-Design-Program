@@ -17,6 +17,7 @@
     - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
     - [CONCEPT OF DECOUPLING CAPACITOR](#concept-of-decoupling-capacitor)
     - [CONCEPT OF POWER PLANNING](#concept-of-power-planning)
+  - [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
 - [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
   - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
   - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
@@ -255,6 +256,7 @@ Ground bounce occurs when a group of cells switch from 1 to 0 simultaneously, du
 ![image](https://github.com/user-attachments/assets/b4859dea-2da9-4f12-b459-389bbdae8fa1)
 To prevent these issues, a technique called power planning is used. This involves creating two separate power meshes: one for Vdd (positive voltage) and another for ground. These meshes are typically implemented using the top two metal layers to minimize voltage drops. They are spread across the design and connected to multiple Vdd and ground sources. With this approach, when a cell requires power to switch from 0 to 1, it draws from the nearest Vdd layer. Conversely, when a cell needs to drain power, it discharges to the nearest ground layer. This ensures stable and efficient power distribution throughout the chip.
 
+### LIBRARY BINDING AND PLACEMENTS
 
 ## DAY2 LABS: FLOORPLANNING & PLACEMENT
 
