@@ -297,6 +297,7 @@ Now, we can use 'Magic' tool to expllore the floorplan.
 
 ![8 what command](https://github.com/user-attachments/assets/5941e834-c4c9-48ee-9db3-a514dc51cb38)
 
+### LIBRARY BINDING AND PLACEMENTS
 
 
 
