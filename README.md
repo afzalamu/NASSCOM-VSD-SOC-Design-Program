@@ -13,7 +13,7 @@
   - [Characterization of Synthesized Results](#characterization-of-synthesized-results)
 - [DAY2 THEORY: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#day2-theory--good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
   - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
-    - [UTILISATION FACTOR AND ASPECT RATIO](#utilisation-factor-and-aspect-ratio)
+    - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
     - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
 
 
