@@ -201,8 +201,16 @@ we have the synthesis results stored here now.
 ```
 Utilization Factor = (Area occupied by netlist / Total core area)
 ```
-
-
+* **Aspect Ratio:** The Aspect Ratio is defined as the ratio of the height of the core to its width. When the Aspect Ratio is 1, the core is considered to be square-shaped. If the Aspect Ratio is different from 1, the core will have a rectangular shape.
+```
+Aspect Ratio = (Height of the core / Width of the core)
+```
+![image](https://github.com/user-attachments/assets/e971d307-4928-4107-84b8-5f329fdfd8ed)
+So, for the above case:
+```
+Utilisation Factor = (4 sq units)/(4sq units) = 1
+Aspect Ratio = (2units)/(2units) = 1 i.e core has Square Shape
+```
 
 
 
