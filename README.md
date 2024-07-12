@@ -32,7 +32,7 @@ We will be designing this microprocessor from the abstract level to the fabricat
 
 | **Component** | **Description** |
 |---------------|-----------------|
-| **Core** | The core is the section of the chip where the primary logic resides.|
+| **Core** | The core is the section of the chip where the fundamental logic pf the design is placed.|
 | **IO Pads** | IO pads serve as the communication channels between the core and the external environment.|
 | **Die** | The die is the part of the chip that includes both the core and IO pads. It is the area that is implemented on silicon wafer|
 | **IPs** | Foundry IPs require manual design or human intervention to create, such as components  ADC, DAC, PLLs and may more.|
@@ -197,6 +197,10 @@ we have the synthesis results stored here now.
   core area will be 4 sq.units.
 ![image](https://github.com/user-attachments/assets/44685856-5790-4279-bdfd-45bb4370ee07)
 
+* **Utilization Factor:** The Utilization Factor is defined as the ratio of the core area occupied by the netlist to the total core area. In an effective floorplan, the Utilization Factor should not be 1. If the Utilization Factor reaches 1, there will be no available space for adding any additional logic, making it a poor floorplan.
+```
+Utilization Factor = (Area occupied by netlist / Total core area)
+```
 
 
 
