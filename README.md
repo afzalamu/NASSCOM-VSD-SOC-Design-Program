@@ -209,10 +209,14 @@ Aspect Ratio = (Height of the core / Width of the core)
 So, for the above case:
 ```
 Utilisation Factor = (4 sq units)/(4sq units) = 1
-Aspect Ratio = (2units)/(2units) = 1 i.e core has Square Shape
+Aspect Ratio = (2 units)/(2 units) = 1 i.e core has Square Shape
 ```
-
-
+Now, if we take the another case given below:
+![image](https://github.com/user-attachments/assets/4fd9844c-bf22-43e2-8a56-02797b381148)
+```
+Utilisation Factor = (4 sq units)/(8 sq units) = 0.5
+Aspect Ratio = (2 units)/(4 units) = 0.5 i.e core has Rectangular Shape
+```
 
 
 
