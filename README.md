@@ -223,6 +223,7 @@ Aspect Ratio = (2 units)/(4 units) = 0.5 i.e core has Rectangular Shape
 
 The concept of preplaced cells begins with organizing a complex combinational logic circuit, which may contain thousands of gates, into predefined locations within the layout. This involves identifying and positioning critical components or blocks, such as memory modules, clock gating cells, comparators, and multiplexers. These preplaced cells are treated as distinct entities or "black boxes" to streamline integration and management. The arrangement of these preplaced cells and other IPs within the design layout is known as floorplanning. 
 These IP`s / blocks have user defined locations and hence are  placed in chip before automated placement- and-routing and are called pre-placed cells.
+Automated Plcement and routing tools places the remaining logical cells in the design onto the chip.
 
 
 
