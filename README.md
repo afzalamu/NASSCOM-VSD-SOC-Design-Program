@@ -238,6 +238,15 @@ In circuits, certain high-power components may not receive adequate power from t
 
 
 
+## DAY2 LABS: FLOORPLANNING
+
+To ensure a smooth floorplanning process, designers must pay attention to certain parameters, known as switches, which can significantly impact the floorplan when adjusted. For instance, the utilization factor and aspect ratio are among these critical switches. Designers need to verify that these parameters align with the project requirements before initiating the floorplanning stage. The image below illustrates various types of switches involved in the floorplanning phase.
+![1](https://github.com/user-attachments/assets/91630f9e-fa8b-4e4a-afc2-0c3d66c39ffa)
+
+
+
+
+
 
 
 
