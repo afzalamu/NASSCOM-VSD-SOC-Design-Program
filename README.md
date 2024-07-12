@@ -243,6 +243,28 @@ In circuits, certain high-power components may not receive adequate power from t
 To ensure a smooth floorplanning process, designers must pay attention to certain parameters, known as switches, which can significantly impact the floorplan when adjusted. For instance, the utilization factor and aspect ratio are among these critical switches. Designers need to verify that these parameters align with the project requirements before initiating the floorplanning stage. The image below illustrates various types of switches involved in the floorplanning phase.
 ![1](https://github.com/user-attachments/assets/91630f9e-fa8b-4e4a-afc2-0c3d66c39ffa)
 
+* Now, after the synthesis is completed, To run the Floorplan Use the following command:
+  ```
+  run_floorplan
+  ```
+![2](https://github.com/user-attachments/assets/bf52d41f-7c70-4971-b0b1-8b73303bab02)
+When the floorplaning is completed, To view the results go to the path as shown in image below  : 
+![4 def file](https://github.com/user-attachments/assets/229f9afe-3a12-4afa-b5f3-a38f97544d65)
+open the def file
+![5 def file reuslts](https://github.com/user-attachments/assets/484078cb-b5d8-4f09-895c-159fd63d4e5f)
+These results are useful for various analysis, for example: we can see the die area :
+![6 area](https://github.com/user-attachments/assets/14b5aac1-a100-434a-8499-ce6dd35d3716)
+
+Now, to open this "def" file in magic , use the following command:
+```
+ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
+
+```
+
+
+
+  
+
 
 
 
