@@ -277,6 +277,7 @@ Now, we can use 'Magic' tool to expllore the floorplan.
 | **Centering the Design**       | 1. Press `S` to select the entire design.<br>2. Press `V` to align it vertically to the middle of the screen.       |
 | **Zooming In on a Specific Area** | 1. Left-click and drag to highlight the desired region.<br>2. Right-click to open the context menu.<br>3. Press `Z` to zoom in on the selected area. |
 | **Retrieving Cell Details**    | 1. Hover your cursor over the cell you want details for.<br>2. Press `S` to select the cell.<br>3. In the `tkcon` window, type the command `what` to display the cell's details. |
+
 ![8 what command](https://github.com/user-attachments/assets/5941e834-c4c9-48ee-9db3-a514dc51cb38)
 
 
