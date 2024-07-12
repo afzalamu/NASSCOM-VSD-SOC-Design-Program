@@ -248,11 +248,17 @@ To ensure a smooth floorplanning process, designers must pay attention to certai
   run_floorplan
   ```
 ![2](https://github.com/user-attachments/assets/bf52d41f-7c70-4971-b0b1-8b73303bab02)
+
 When the floorplaning is completed, To view the results go to the path as shown in image below  : 
+
 ![4 def file](https://github.com/user-attachments/assets/229f9afe-3a12-4afa-b5f3-a38f97544d65)
-open the def file
+
+open the def file:
+
 ![5 def file reuslts](https://github.com/user-attachments/assets/484078cb-b5d8-4f09-895c-159fd63d4e5f)
+
 These results are useful for various analysis, for example: we can see the die area :
+
 ![6 area](https://github.com/user-attachments/assets/14b5aac1-a100-434a-8499-ce6dd35d3716)
 
 Now, to open this "def" file in magic , use the following command:
