@@ -19,6 +19,8 @@
     - [CONCEPT OF POWER PLANNING](#concept-of-power-planning)
   - [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
     - [Netlist binding and initial place design](#netlist-binding-and-initial-place-design)
+    - [Optimize placement using estimated wire-length and capacitance](#optimize-placement-using-estimated-wire-length-and-capacitance)
+
 - [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
   - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
   - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
@@ -258,11 +260,17 @@ Ground bounce occurs when a group of cells switch from 1 to 0 simultaneously, du
 To prevent these issues, a technique called power planning is used. This involves creating two separate power meshes: one for Vdd (positive voltage) and another for ground. These meshes are typically implemented using the top two metal layers to minimize voltage drops. They are spread across the design and connected to multiple Vdd and ground sources. With this approach, when a cell requires power to switch from 0 to 1, it draws from the nearest Vdd layer. Conversely, when a cell needs to drain power, it discharges to the nearest ground layer. This ensures stable and efficient power distribution throughout the chip.
 
 ### LIBRARY BINDING AND PLACEMENTS
+
 #### Netlist binding and initial place design
 In a netlist, each component has a distinct shape— for example, an AND gate has one shape while an OR gate has another. However, in a library, all components are represented by a uniform square or rectangular shape. A library contains a variety of elements that are ready to use, each with specified properties such as area and delay. Additionally, there are different versions of the same component, each with varying properties.
 ![image](https://github.com/user-attachments/assets/fb46bf68-612c-4df5-9014-1b74aca1375e)
 In the image above, we have three different sets of the same elements. The larger elements are faster but take up more space, while the smaller elements occupy less area but operate more slowly compared to the larger ones.
 
+#### Optimize placement using estimated wire-length and capacitance
+In the placement stage, it is crucial to take into account the estimated wire length when positioning cells. Wire length estimation involves calculating the distances from the input sources of cells to the output sinks they drive.
+
+In the example above, the tool positions the blocks based on these estimated wire lengths, as illustrated in the figure below.
+![image](https://github.com/user-attachments/assets/997a2b24-fdf1-4284-bb8d-d709ef55bc4d)
 
 
 ## DAY2 LABS: FLOORPLANNING & PLACEMENT
