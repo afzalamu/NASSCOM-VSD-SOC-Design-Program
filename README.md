@@ -228,6 +228,11 @@ The concept of preplaced cells begins with organizing a complex combinational lo
 These IP`s / blocks have user defined locations and hence are  placed in chip before automated placement- and-routing and are called pre-placed cells.
 Automated Plcement and routing tools places the remaining logical cells in the design onto the chip.
 
+#### CONCEPT OF DECOUPLING CAPACITOR
+![image](https://github.com/user-attachments/assets/8bfb1295-5fa8-4b59-a3e9-2ce191ffea69)
+In circuits, certain high-power components may not receive adequate power from the source due to voltage drops in the connecting wires, causing their operation to fall outside their required voltage range for reliable switching. To address this issue, decoupling capacitors (De-cap cells) are strategically placed near these power-intensive components. These capacitors are connected to the power source and charge to a high level when no switching occurs. When switching activities commence, the decoupling capacitors quickly discharge to supply the necessary power directly to these components. Once switching ceases, the capacitors recharge, ensuring consistent and reliable power delivery to critical circuit components. This mechanism is essential in circuit design to maintain stable operation and prevent performance issues caused by fluctuating power supply conditions.
+
+
 
 
 
