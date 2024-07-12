@@ -221,7 +221,7 @@ Aspect Ratio = (2 units)/(4 units) = 0.5 i.e core has Rectangular Shape
 #### CONCEPT OF PREPLACED CELLS
 ![image](https://github.com/user-attachments/assets/ac8dc27f-1213-4814-bfb5-76ebae9fbd3c)
 
-The concept of preplaced cells involves organizing a complex combinational logic circuit, which can contain thousands of gates, into predefined locations within a layout. This approach begins with defining the locations of critical components or blocks within the circuit. By partitioning the logic into smaller blocks or modules, we can optimize the floorplan and streamline the routing of connections between them. These preplaced cells or blocks are then treated as distinct entities, often referred to as "black boxes," which can be managed separately as individual IPs or modules. This method enhances the design's manageability and efficiency, ensuring better performance and easier integration.
+The concept of preplaced cells begins with organizing a complex combinational logic circuit, which may contain thousands of gates, into predefined locations within the layout. This involves identifying and positioning critical components or blocks, such as memory modules, clock gating cells, comparators, and multiplexers. These preplaced cells are treated as distinct entities or "black boxes" to streamline integration and management. The arrangement of these preplaced cells and other IPs within the design layout is known as floorplanning. Floorplanning ensures optimal performance, efficient space utilization, and effective routing, ultimately enhancing the modularity, scalability, and overall manageability of the circuit.
 
 
 
