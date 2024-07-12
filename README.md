@@ -267,6 +267,7 @@ Now, to open this "def" file in magic , use the following command:
 
 ```
 
+![7 opening in magic](https://github.com/user-attachments/assets/14b20546-e434-4bad-93d1-6be3ea5fee71)
 
 
   
