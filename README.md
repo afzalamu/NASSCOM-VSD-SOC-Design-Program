@@ -184,6 +184,7 @@ we have the synthesis results stored here now.
 ### CHIP FLOORPLANNING CONSIDERATIONS
 
 * UTILISATION FACTOR AND ASPECT RATIO
+  
   In order to calculate the utilization factor & aspect ratio, first we need to calculate the height and width of the core and die.
   ![image](https://github.com/user-attachments/assets/638b2fc2-54c8-43f4-afad-183281247e6b)
   The core area's dimensions will be determined by the design's netlist, which is based on the number of components necessary to implement
@@ -191,7 +192,10 @@ we have the synthesis results stored here now.
 
   For example, lets consider a netlist that is having two logic gates and two flipflops.
   ![image](https://github.com/user-attachments/assets/d648385f-74aa-4103-b60b-e5a1ba0e98e6)
-  
+
+  Now, if we consider the elements each having area of 1 sq.unit. The netlist contains 4 elements and the minimum total area required for the
+  core area will be 4 sq.units.
+![image](https://github.com/user-attachments/assets/44685856-5790-4279-bdfd-45bb4370ee07)
 
 
 
