@@ -16,6 +16,12 @@
     - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
     - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
     - [CONCEPT OF DECOUPLING CAPACITOR](#concept-of-decoupling-capacitor)
+- [DAY2 LABS: FLOORPLANNING](#day2-labs-floorplanning)
+  - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
+    - [Design Alignment Instructions in MAGIC](#design-alignment-instructions-in-magic)
+
+
+
 
 
 
@@ -239,6 +245,8 @@ In circuits, certain high-power components may not receive adequate power from t
 
 
 ## DAY2 LABS: FLOORPLANNING
+
+### STEPS TO RUN FLOORPLAN USING OPENLANE
 
 To ensure a smooth floorplanning process, designers must pay attention to certain parameters, known as switches, which can significantly impact the floorplan when adjusted. For instance, the utilization factor and aspect ratio are among these critical switches. Designers need to verify that these parameters align with the project requirements before initiating the floorplanning stage. The image below illustrates various types of switches involved in the floorplanning phase.
 ![1](https://github.com/user-attachments/assets/91630f9e-fa8b-4e4a-afc2-0c3d66c39ffa)
