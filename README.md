@@ -15,6 +15,8 @@
   - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
     - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
     - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
+    - [CONCEPT OF DECOUPLING CAPACITOR](#concept-of-decoupling-capacitor)
+
 
 
 # NASSCOM-VSD-SOC-Design-Program
