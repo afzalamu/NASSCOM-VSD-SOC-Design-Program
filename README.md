@@ -280,6 +280,10 @@ In the example above, the tool positions the blocks based on these estimated wir
 
 * **Library:** In the context of IC design, a library (or cell library) consists of a collection of standard cells. Each cell in the library is optimized for specific parameters such as speed (delay), power consumption, area (size), and drive strength.
 
+- A typical Cell Design Flow Involves the follwoing steps as shown below:
+![image](https://github.com/user-attachments/assets/bdbaf1c3-b853-4c3b-886f-80e98d7e5a15)
+
+
 
 
 
