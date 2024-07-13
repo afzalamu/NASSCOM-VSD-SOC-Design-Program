@@ -272,6 +272,18 @@ In the placement stage, it is crucial to take into account the estimated wire le
 In the example above, the tool positions the blocks based on these estimated wire lengths, as illustrated in the figure below.
 ![image](https://github.com/user-attachments/assets/997a2b24-fdf1-4284-bb8d-d709ef55bc4d)
 
+### CELL DESIGN AND CHARCATERISATION FLOWS
+
+![image](https://github.com/user-attachments/assets/3b5e890e-49ba-4d19-9dd4-0062b387a8dc)
+![image](https://github.com/user-attachments/assets/630a5549-1c14-4bae-9ab3-cdb37c0fefc2)
+* **Standard Cells:** These are basic logic gates (like NAND, NOR, XOR, etc.) or more complex functional blocks (like flip-flops or adders) designed to be reusable across different IC designs. They are characterized by their functionality, area, power consumption, and timing characteristics.
+
+* **Library:** In the context of IC design, a library (or cell library) consists of a collection of standard cells. Each cell in the library is optimized for specific parameters such as speed (delay), power consumption, area (size), and drive strength.
+
+
+
+
+
 
 ## DAY2 LABS: FLOORPLANNING & PLACEMENT
 
