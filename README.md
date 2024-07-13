@@ -20,7 +20,7 @@
   - [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
     - [Netlist binding and initial place design](#netlist-binding-and-initial-place-design)
     - [Optimize placement using estimated wire-length and capacitance](#optimize-placement-using-estimated-wire-length-and-capacitance)
-
+  - [CELL DESIGN AND CHARCATERISATION FLOWS](#cell-design-and-characterisation-flows)
 - [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
   - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
   - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
@@ -282,11 +282,6 @@ In the example above, the tool positions the blocks based on these estimated wir
 
 - A typical Cell Design Flow Involves the follwoing steps as shown below:
 ![image](https://github.com/user-attachments/assets/bdbaf1c3-b853-4c3b-886f-80e98d7e5a15)
-
-
-
-
-
 
 
 ## DAY2 LABS: FLOORPLANNING & PLACEMENT
