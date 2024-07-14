@@ -288,11 +288,10 @@ In the example above, the tool positions the blocks based on these estimated wir
 * Propogation Dealy:
  ![image](https://github.com/user-attachments/assets/8f5398c5-5f93-4e10-b2a1-dd6380cef7d8)
 Let us take example wavefrom and calculate the Propogation Delay:
-![Uploading image.png…]()
-
+![image](https://github.com/user-attachments/assets/f491ea30-cfae-4170-81ae-357e6cba8cf9)
 But Here a problem can occur if the thresholds move and results may vary:
 ![image](https://github.com/user-attachments/assets/c9a117f1-c5d0-4d83-95fb-ccc5e8095b08)
-
+So choosing a threshold point carefully is very important.
 
 
 
