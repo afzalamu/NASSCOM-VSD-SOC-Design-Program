@@ -283,6 +283,17 @@ In the example above, the tool positions the blocks based on these estimated wir
 - A typical Cell Design Flow Involves the follwoing steps as shown below:
 ![image](https://github.com/user-attachments/assets/bdbaf1c3-b853-4c3b-886f-80e98d7e5a15)
 
+### GENERAL TIMING CHARACTERISATION PARAMETERS
+![image](https://github.com/user-attachments/assets/c46b462b-8dd0-4c54-8816-449a96f27909)
+* Propogation Dealy:
+ ![image](https://github.com/user-attachments/assets/8f5398c5-5f93-4e10-b2a1-dd6380cef7d8)
+Let us take example wavefrom and calculate the Propogation Delay:
+![image](https://github.com/user-attachments/assets/4a0a17e6-3a93-4333-a6f5-d734993cc9e8)
+But Here a problem can occur if the thresholds move and results may vary:
+![image](https://github.com/user-attachments/assets/c9a117f1-c5d0-4d83-95fb-ccc5e8095b08)
+
+
+
 
 ## DAY2 LABS: FLOORPLANNING & PLACEMENT
 
