@@ -369,6 +369,47 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/user-attachments/assets/6ffd41e9-d805-4da9-aa15-8f641046d05e)
 
 
+## DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
+
+
+## DAY3 LABS : 
+## HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?
+* **Example** : TO CHANEG THE IO PLACER SETTINGS
+  First let us verify the current configuration of the Pins, Go to following directory as shown in image below:
+  ![image](https://github.com/user-attachments/assets/96bbae31-1f95-471b-a0b8-c5611d2318e5)
+Then use the command to open the 'def' file in magic:
+```
+ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def
+```
+![image](https://github.com/user-attachments/assets/b17d3703-53b6-452e-b068-79aeceb42e56)
+As we can seee Pins are randomly equidistant :
+Now, if want it to change to some other IO strategy, as there are four strategy supported by IO placer(Open source EDA tool)
+To do this, first go the following directory and open 'floorplan.tcl' file:
+```
+:~/Desktop/work/tools/openlane_working_dir/openlane/configuration$ 
+```
+![image](https://github.com/user-attachments/assets/a4070962-cbbc-4104-a8d8-bc13a8cdd0f1)
+And from here we can see the switching variable :
+```
+set ::env(FP_IO_MODE) 1; # 0 matching mode - 1 random equidistant mode
+```
+It is set as 1 and hence pins are randomly equidistant.
+Now, go the follwoing tab as shown below and put the following command and change the IO placer settings:
+```
+set ::env(FP_IO_MODE) 2
+run_floorplan
+```
+![image](https://github.com/user-attachments/assets/0f8ffc5e-09b5-40a5-9a45-71bc7b0a5a33)
+Hence, we run the floorplan again
+Now, we can check the chaneg in the IO placer strategy:
+We can see that def file has been updated from the time stamps and date:
+![image](https://github.com/user-attachments/assets/e768c8d7-7e8b-4a7c-b736-76df39912450)
+Now, let us open it in magic using the earlier used command:
+![image](https://github.com/user-attachments/assets/79bbe21a-4550-455d-a667-c220b006a8a0)
+And from the above image we can see teh configuration has been changed.
+
+## CMOS INVERTER SIMULATION WITH NGSPICE
+
 
 
 
