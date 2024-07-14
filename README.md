@@ -293,6 +293,11 @@ But Here a problem can occur if the thresholds move and results may vary:
 ![image](https://github.com/user-attachments/assets/c9a117f1-c5d0-4d83-95fb-ccc5e8095b08)
 So choosing a threshold point carefully is very important.
 
+* Transition Time
+![image](https://github.com/user-attachments/assets/79f62b1b-b71e-4b8a-a4fa-f340f177e028)
+![image](https://github.com/user-attachments/assets/c2a1337b-9628-4d4a-befc-5045f957c884)
+
+
 
 
 ## DAY2 LABS: FLOORPLANNING & PLACEMENT
