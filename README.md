@@ -370,12 +370,29 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 
 ## DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
+### SPICE DECK CREATION FOR CMOS INVERTER
+Spice deck basically Netlist having the connectivity information, Input to be provided, Output Tap points and much more.
+Proceeding with an example:
+![image](https://github.com/user-attachments/assets/396e8d43-5143-4a83-9726-01a51f62549a)
+- Nodes are required to define the netlist.
+  ```
+  MOSFET (ORDER FOR NETLIST) : Drain Gate Substrate Source
+  Syntax for MOSFET In a Netlist:
+  e.g : M1 out in vdd vdd pmos W = 0.375u L = 0.25u
+  ```
+![image](https://github.com/user-attachments/assets/d8cdeaa8-c462-4a10-bd0f-b58e6c91b8b7)
+![image](https://github.com/user-attachments/assets/937ef7be-d437-4920-9dc1-8d3c1c3dc748)
+
+
+
+
+
 
 
 ## DAY3 LABS : 
 ## HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?
 * **Example** : TO CHANEG THE IO PLACER SETTINGS
-  First let us verify the current configuration of the Pins, Go to following directory as shown in image below:
+First let us verify the current configuration of the Pins, Go to following directory as shown in image below:
   ![image](https://github.com/user-attachments/assets/96bbae31-1f95-471b-a0b8-c5611d2318e5)
 Then use the command to open the 'def' file in magic:
 ```
