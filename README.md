@@ -419,6 +419,8 @@ CMOS circuit is a very Robust device, seee the below image:
 ### FORMATION OF GATE TERMINALS
 ![Presentation3](https://github.com/user-attachments/assets/532497dc-b850-43d6-8710-06b6245c2a90)
 
+### LIGHTLY DOPED DRAIN (LDD) FORMATION
+![Presentation5](https://github.com/user-attachments/assets/400d590f-aa0d-4444-8af6-53b5069c4b2d)
 
 
 
