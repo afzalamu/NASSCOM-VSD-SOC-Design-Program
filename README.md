@@ -416,6 +416,9 @@ CMOS circuit is a very Robust device, seee the below image:
 ### FORMATION OF WELLS
 ![Presentation2](https://github.com/user-attachments/assets/0b159169-a4e3-4960-943b-2cb35f890c18)
 
+### FORMATION OF GATE TERMINALS
+![Presentation3](https://github.com/user-attachments/assets/532497dc-b850-43d6-8710-06b6245c2a90)
+
 
 
 
