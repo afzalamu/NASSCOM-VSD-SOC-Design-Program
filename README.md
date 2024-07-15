@@ -411,7 +411,7 @@ CMOS circuit is a very Robust device, seee the below image:
 ## INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS
 
 ### CREATE ACTIVE REGIONS
-  
+  [Watch the video](NASSCOM-VSD-SOC-Design-Program/Create_Active_Regions.mp4)
 
 
 
