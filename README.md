@@ -501,6 +501,7 @@ And from the above image we can see teh configuration has been changed.
   ![image](https://github.com/user-attachments/assets/ab5881d8-6103-4301-80a9-be5374fd1880)
 
 
+
 ## INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER
 When polysilicon crosses the ndiffusion region it is termed as 'NMOS' and when it crosses the pdiffusion region it is termed as 'PMOS', same is verified in image below:
 ![image](https://github.com/user-attachments/assets/664e26ff-25c9-4ca1-a2ae-26ee5ef13b0f)
