@@ -508,9 +508,18 @@ When polysilicon crosses the ndiffusion region it is termed as 'NMOS' and when i
 
 ## TO CREATE STANDARD CELL LAYOUT IN MAGIC
 follow this Repository: [Click here](https://github.com/nickson-jose/vsdstdcelldesign)
-  
-  
 
+## TO EXTRACT THE NETLIST IN MAGIC
+In the tckon window, use the following command:
+```
+% extract all
+% ext2spice cthresh 0 rthresh 0
+```
+![image](https://github.com/user-attachments/assets/1bac51de-c6ff-4774-a5c5-edfc6041732e)
+![image](https://github.com/user-attachments/assets/3f29aa49-2686-4578-9bdd-c132a1c57769)
+Now, lets open the created spice file:
+![image](https://github.com/user-attachments/assets/9b9c5726-9aa9-40f4-a690-0aa3ecba8d50)
+This contains the spice deck.
 
 
 
