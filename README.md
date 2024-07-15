@@ -369,8 +369,9 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/user-attachments/assets/6ffd41e9-d805-4da9-aa15-8f641046d05e)
 
 
-## DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
-### SPICE DECK CREATION FOR CMOS INVERTER
+# DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
+
+## SPICE DECK CREATION FOR CMOS INVERTER
 Spice deck basically Netlist having the connectivity information, Input to be provided, Output Tap points and much more.
 Proceeding with an example:
 ![image](https://github.com/user-attachments/assets/396e8d43-5143-4a83-9726-01a51f62549a)
@@ -385,9 +386,9 @@ Proceeding with an example:
 CMOS circuit is a very Robust device, seee the below image:
 ![image](https://github.com/user-attachments/assets/1b541867-0ca3-4832-9e7f-d5c7c6051ae7)
 
-# Inverter Characteristics
+## Inverter Characteristics
 
-## Static Characteristics
+### Static Characteristics
 
 | Characteristic         | Description                                                                 |
 |------------------------|-----------------------------------------------------------------------------|
@@ -398,7 +399,7 @@ CMOS circuit is a very Robust device, seee the below image:
 | **Output High Voltage (Voh)** | The output voltage level when the inverter transitions from low to high. |
 | **Noise Margins**             | The voltage ranges that define the low noise margin (between Vil and Vol) and the high noise margin (between Vih and Voh). |
 
-## Dynamic Characteristics
+### Dynamic Characteristics
 
 | Characteristic           | Description                                                                 |
 |--------------------------|-----------------------------------------------------------------------------|
@@ -407,6 +408,10 @@ CMOS circuit is a very Robust device, seee the below image:
 | **Fall Time (tf)**       | The duration for the output to shift from Voh to Vol.                       |
 
 
+## INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS
+
+### CREATE ACTIVE REGIONS
+  
 
 
 
@@ -476,7 +481,7 @@ And from the above image we can see teh configuration has been changed.
   ```
   ![image](https://github.com/user-attachments/assets/ab5881d8-6103-4301-80a9-be5374fd1880)
 
-  
+
   
   
 
