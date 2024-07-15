@@ -422,8 +422,10 @@ CMOS circuit is a very Robust device, seee the below image:
 ### LIGHTLY DOPED DRAIN (LDD) FORMATION
 ![Presentation5](https://github.com/user-attachments/assets/400d590f-aa0d-4444-8af6-53b5069c4b2d)
 
+### SOURCE DRAIN FORMATION
+![Presentation6](https://github.com/user-attachments/assets/c50c5c3a-47b1-4e0b-966d-265c94a9bade)
 
-
+### LOCAL INTERCONNECT FORMATION
 
 
 ## DAY3 LABS : 
