@@ -519,6 +519,7 @@ In the tckon window, use the following command:
 ![image](https://github.com/user-attachments/assets/3f29aa49-2686-4578-9bdd-c132a1c57769)
 Now, lets open the created spice file:
 ![image](https://github.com/user-attachments/assets/9b9c5726-9aa9-40f4-a690-0aa3ecba8d50)
+
 This contains the spice deck.
 
 
