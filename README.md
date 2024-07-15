@@ -382,6 +382,28 @@ Proceeding with an example:
   ```
 ![image](https://github.com/user-attachments/assets/d8cdeaa8-c462-4a10-bd0f-b58e6c91b8b7)
 ![image](https://github.com/user-attachments/assets/937ef7be-d437-4920-9dc1-8d3c1c3dc748)
+CMOS circuit is a very Robust device, seee the below image:
+![image](https://github.com/user-attachments/assets/1b541867-0ca3-4832-9e7f-d5c7c6051ae7)
+# Inverter Characteristics
+
+## Static Characteristics
+
+| Characteristic         | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| **Switching Threshold (Vth)** | The voltage at which the inverter transitions from the high state (logic 1) to the low state (logic 0). |
+| **Input Low Voltage (Vil)**   | The maximum input voltage considered as logic 0.                      |
+| **Input High Voltage (Vih)**  | The minimum input voltage considered as logic 1.                      |
+| **Output Low Voltage (Vol)**  | The voltage at which the output transitions from high to low.         |
+| **Output High Voltage (Voh)** | The voltage at which the output transitions from low to high.         |
+| **Noise Margins**             | The voltage range between Vil and Vol (low noise margin) and between Vih and Voh (high noise margin). |
+
+## Dynamic Characteristics
+
+| Characteristic           | Description                                                                 |
+|--------------------------|-----------------------------------------------------------------------------|
+| **Propagation Delays**   | The time taken for the output to change after a change in input.            |
+| **Rise Time (tr)**       | The time taken for the output to transition from Vol to Voh.                |
+| **Fall Time (tf)**       | The time taken for the output to transition from Voh to Vol.                |
 
 
 
