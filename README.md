@@ -506,7 +506,8 @@ When polysilicon crosses the ndiffusion region it is termed as 'NMOS' and when i
 ![image](https://github.com/user-attachments/assets/664e26ff-25c9-4ca1-a2ae-26ee5ef13b0f)
 ![image](https://github.com/user-attachments/assets/26cf1727-4940-40ba-a479-d0b0c8093d97)
 
-
+## TO CREATE STANDARD CELL LAYOUT IN MAGIC
+follow this Repository: [Click here](https://github.com/nickson-jose/vsdstdcelldesign)
   
   
 
