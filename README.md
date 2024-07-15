@@ -413,6 +413,8 @@ CMOS circuit is a very Robust device, seee the below image:
 ### CREATE ACTIVE REGIONS
 ![Presentation1](https://github.com/user-attachments/assets/cbd805ea-ad86-4ad9-a830-ed658ef98a2c)
 
+### FORMATION OF WELLS
+![Presentation2](https://github.com/user-attachments/assets/0b159169-a4e3-4960-943b-2cb35f890c18)
 
 
 
