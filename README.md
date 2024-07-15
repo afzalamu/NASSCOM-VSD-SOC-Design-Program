@@ -449,8 +449,36 @@ Now, let us open it in magic using the earlier used command:
 ![image](https://github.com/user-attachments/assets/79bbe21a-4550-455d-a667-c220b006a8a0)
 And from the above image we can see teh configuration has been changed.
 
-## CMOS INVERTER SIMULATION WITH NGSPICE
+## HOW TO GIT CLONE THE "vsdstdcelldesign"?
+- Go to Openlane directory and use the following command:
+  ```
+  git clone <url of the github repo you want to clone>
+  ```
+  For example here:
+  ```
+  git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+  ```
+  ![image](https://github.com/user-attachments/assets/08dee3c2-f175-4d83-8636-d437d7f91c03)
+  From the above image we can see it is cloned successfully.
+  Now, we will open the 'mag' file and in order to do that we require 'tech'file taht is present in the following directory:
+  ```
+  vsduser@vsdsquadron:~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic$ 
+  ```
+  so first we copy that file here, by using the following command:
+  ```
+  cp sky130A.tech /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+  ```
+  ![image](https://github.com/user-attachments/assets/79665b35-d92d-4af0-9833-383a78950814)
+  It is copied successfully.
+  Now, open the mag file magic:
+  ```
+  magic -T sky130A.tech sky130_inv.mag &
+  ```
+  ![image](https://github.com/user-attachments/assets/ab5881d8-6103-4301-80a9-be5374fd1880)
 
+  
+  
+  
 
 
 
