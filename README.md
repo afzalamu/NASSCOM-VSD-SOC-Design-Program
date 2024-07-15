@@ -435,7 +435,9 @@ CMOS circuit is a very Robust device, seee the below image:
 
 
 ## DAY3 LABS : 
+
 ## HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?
+
 * **Example** : TO CHANEG THE IO PLACER SETTINGS
 First let us verify the current configuration of the Pins, Go to following directory as shown in image below:
   ![image](https://github.com/user-attachments/assets/96bbae31-1f95-471b-a0b8-c5611d2318e5)
@@ -471,6 +473,7 @@ Now, let us open it in magic using the earlier used command:
 And from the above image we can see teh configuration has been changed.
 
 ## HOW TO GIT CLONE THE "vsdstdcelldesign"?
+
 - Go to Openlane directory and use the following command:
   ```
   git clone <url of the github repo you want to clone>
@@ -497,6 +500,8 @@ And from the above image we can see teh configuration has been changed.
   ```
   ![image](https://github.com/user-attachments/assets/ab5881d8-6103-4301-80a9-be5374fd1880)
 
+
+## INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER
 
   
   
