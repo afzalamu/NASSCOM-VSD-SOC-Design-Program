@@ -426,6 +426,9 @@ CMOS circuit is a very Robust device, seee the below image:
 ![Presentation6](https://github.com/user-attachments/assets/c50c5c3a-47b1-4e0b-966d-265c94a9bade)
 
 ### LOCAL INTERCONNECT FORMATION
+![Presentation7](https://github.com/user-attachments/assets/3519dd28-d7b1-4521-9018-aa994e89b8ae)
+
+### HIGHER LEVEL METAL FORMATION
 
 
 ## DAY3 LABS : 
