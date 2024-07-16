@@ -25,12 +25,22 @@
 - [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
   - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
   - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
-
-    
-
-
-
-
+- [DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION](#day3-theory--design-library-cell-using-magic-layout-and-ngspice-characterization)
+  - [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
+  - [INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS](#inception-of-layout--cmos-fabrication-process)
+    - [CREATE ACTIVE REGIONS](#create-active-regions)
+    - [FORMATION OF WELLS](#formation-of-wells)
+    - [FORMATION OF GATE TERMINALS](#formation-of-gate-terminals)
+    - [LIGHTLY DOPED DRAIN (LDD) FORMATION](#lightly-doped-drain-ldd-formation)
+    - [SOURCE DRAIN FORMATION](#source-drain-formation)
+    - [LOCAL INTERCONNECT FORMATION](#local-interconnect-formation)
+    - [HIGHER LEVEL METAL FORMATION](#higher-level-metal-formation)
+- [DAY3 LABS :](#day3-labs-)
+  - [HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?](#how-to-make-changes-while-being-in-then-flow)
+  - [HOW TO GIT CLONE THE "vsdstdcelldesign"](#how-to-git-clone-the-vsdstdcelldesign)
+  - [INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER](#introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
+  - [TO CREATE STANDARD CELL LAYOUT IN MAGIC](#to-create-standard-cell-layout-in-magic)
+  - [TO EXTRACT THE NETLIST IN MAGIC](#to-extract-the-netlist-in-magic)
 
 
 
@@ -435,7 +445,7 @@ CMOS circuit is a very Robust device, seee the below image:
 
 
 
-## DAY3 LABS : 
+## DAY3 LABS :
 
 ## HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?
 
@@ -473,7 +483,7 @@ Now, let us open it in magic using the earlier used command:
 ![image](https://github.com/user-attachments/assets/79bbe21a-4550-455d-a667-c220b006a8a0)
 And from the above image we can see teh configuration has been changed.
 
-## HOW TO GIT CLONE THE "vsdstdcelldesign"?
+## HOW TO GIT CLONE THE "vsdstdcelldesign"
 
 - Go to Openlane directory and use the following command:
   ```
