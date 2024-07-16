@@ -21,6 +21,7 @@
     - [Netlist binding and initial place design](#netlist-binding-and-initial-place-design)
     - [Optimize placement using estimated wire-length and capacitance](#optimize-placement-using-estimated-wire-length-and-capacitance)
   - [CELL DESIGN AND CHARCATERISATION FLOWS](#cell-design-and-characterisation-flows)
+  - [CELL DESIGN AND CHARACTERISATION FLOWS](#cell-design-and-characterisation-flows)
 - [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
   - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
   - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
@@ -272,7 +273,7 @@ In the placement stage, it is crucial to take into account the estimated wire le
 In the example above, the tool positions the blocks based on these estimated wire lengths, as illustrated in the figure below.
 ![image](https://github.com/user-attachments/assets/997a2b24-fdf1-4284-bb8d-d709ef55bc4d)
 
-### CELL DESIGN AND CHARCATERISATION FLOWS
+### CELL DESIGN AND CHARACTERISATION FLOWS
 
 ![image](https://github.com/user-attachments/assets/3b5e890e-49ba-4d19-9dd4-0062b387a8dc)
 ![image](https://github.com/user-attachments/assets/630a5549-1c14-4bae-9ab3-cdb37c0fefc2)
