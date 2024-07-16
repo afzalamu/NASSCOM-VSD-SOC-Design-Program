@@ -631,6 +631,25 @@ Open the Sky130a.tech file located in the drc_tests directory. Search for the po
 Reload the tech file using the command tech load sky130A.tech, and recheck the design rule checks (DRC) by executing drc check in the tkcon terminal.
 ![image](https://github.com/user-attachments/assets/5f15aa07-f354-4b2f-8537-d6dc72b17b2a)
 
+## Lab challenge exercise to describe DRC error as geometrical construct
+Now load nwell.mag file into the magic and check for violations.
+![image](https://github.com/user-attachments/assets/30cf2eb7-48a7-48da-8008-ea491ee7e95d)
+In the above layout we have some violations, Open tech file and make changes as shown:
+![image](https://github.com/user-attachments/assets/c3bf0b0f-89c9-4806-add7-d02db84c42b8)
+![image](https://github.com/user-attachments/assets/7cb3538a-a06d-4517-b79a-224ba266f611)
+
+
+## Lab challenge to find missing or Incorrect rules and fix them
+After updatinf the tech file, lus ethe following commands:
+```
+tech load sky130A.tech
+drc check
+drc style drc(full)
+```
+![image](https://github.com/user-attachments/assets/4bfb7e93-8fa6-4969-915d-956d09f2b472)
+Now, we can see as we apply teh contact the errors are removed.
+
+
 
 
   
