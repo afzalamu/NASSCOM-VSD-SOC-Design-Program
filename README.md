@@ -602,8 +602,6 @@ In the downloaded files , **.magicrc** file serves as the start-up script for MA
 Let us start by opening met3.mag file in magic
 ![image](https://github.com/user-attachments/assets/d2cc0e9d-8371-43f5-8f58-215e6a61f6b5)
 
-Sure, here's a table for your GitHub README file:
-
 ---
 
 | **Step**                              | **Instructions**                                                                                                                                   |
@@ -618,7 +616,20 @@ Sure, here's a table for your GitHub README file:
 use 'feed clear' to go back to previous view
 ```
 
+## Lab exercise to fix Poly-9 error in Sky130 tech file
+Load 'poly.mag' file in magic 
+![image](https://github.com/user-attachments/assets/8f7cb9f4-cf9c-46a3-93b7-5e6a2c51e33a)
+Verify the spacing between the poly resistor and the poly in the layout and compare it with the specified value on the Skywater website. The image below highlights the spacing error between them. Let's proceed to correct it.
+![image](https://github.com/user-attachments/assets/38d76300-fc04-4200-9846-cc6e748029e3)
+![image](https://github.com/user-attachments/assets/39de23bd-709f-4854-8d50-f13da2c2fef0)
 
+Open the Sky130a.tech file located in the drc_tests directory. Search for the poly.9 keyword and apply the changes shown in the images below. Save the file after making the modifications.
+
+![image](https://github.com/user-attachments/assets/50c09602-f045-4642-adfe-75be38fdfa53)
+![image](https://github.com/user-attachments/assets/771de5e8-f60c-4f98-bc7d-0abf237b0288)
+
+Reload the tech file using the command tech load sky130A.tech, and recheck the design rule checks (DRC) by executing drc check in the tkcon terminal.
+![image](https://github.com/user-attachments/assets/5f15aa07-f354-4b2f-8537-d6dc72b17b2a)
 
 
 
