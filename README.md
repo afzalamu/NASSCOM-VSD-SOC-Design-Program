@@ -41,6 +41,9 @@
   - [INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER](#introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
   - [TO CREATE STANDARD CELL LAYOUT IN MAGIC](#to-create-standard-cell-layout-in-magic)
   - [TO EXTRACT THE NETLIST IN MAGIC](#to-extract-the-netlist-in-magic)
+  - [SKY130 TECH FILE LABS](#sky130-tech-file-labs)
+    - [CREATE SPICEDECK USING SKY130 TECH](#create-spicedeck-using-sky130-tech)
+    - [CHARACTERIZE INVERTER USING SKY130 TECH FILES](#characterize-inverter-using-sky130-tech-files)
 
 
 
