@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/db092a5b-7304-423b-9a0b-20ff4cf061e3)
 # NASSCOM-VSD-SOC-Design-Program
 
 ## Table of Contents
