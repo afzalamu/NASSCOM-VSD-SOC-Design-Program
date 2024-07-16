@@ -1,4 +1,4 @@
-
+![image](https://github.com/user-attachments/assets/db092a5b-7304-423b-9a0b-20ff4cf061e3)
 # NASSCOM-VSD-SOC-Design-Program
 
 ## Table of Contents
@@ -577,7 +577,47 @@ To characterize the inverter, we analyzed the ngspice plot and determined the fo
   
 With these parameters successfully characterized, the next step is to create a LEF file.
 
+## INTRODUCTION TO MAGIC TOOLS AND DRC RULES
+[Follow this Webpage](http://opencircuitdesign.com/magic/)
 
+## INTRODUCTION TO SKY130 PDK
+[Follow this Webpage for Documentation](https://skywater-pdk.readthedocs.io/en/main/)
+Now us the follwoing command to download the Lab files while being in the home directory :
+```
+sudo wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+
+```
+![image](https://github.com/user-attachments/assets/a6439cb4-6ff2-440b-a2dd-297d84cd5cf7)
+
+Now you have downloaded the zip file. To extract the labs from the zip file use the command
+```
+sudo tar xfz drc_tests.tgz
+```
+![image](https://github.com/user-attachments/assets/f61a4bf3-ea18-45de-857a-329014cdd1b0)
+
+In the downloaded files , **.magicrc** file serves as the start-up script for MAGIC.
+
+## INTRODUCTION TO MAGIC & STEPS TO LOAD SKY130 TECH RULES
+"Run the command `magic -d XR` to open the Magic tool."
+![image](https://github.com/user-attachments/assets/4f33e4e4-4192-46d2-8ca8-c9ec5efd2a67)
+Let us start by opening met3.mag file in magic
+![image](https://github.com/user-attachments/assets/d2cc0e9d-8371-43f5-8f58-215e6a61f6b5)
+
+Sure, here's a table for your GitHub README file:
+
+---
+
+| **Step**                              | **Instructions**                                                                                                                                   |
+|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Select an Area and Fill with Metal 3** | 1. Open the Magic GUI.<br>2. Select the desired area on your layout.<br>3. Navigate to the metal 3 layer.<br>4. Press `P` to fill the selected region with metal 3. |
+| **Create the VIA2 Mask**              | 1. Open the tkcon terminal within Magic.<br>2. Type the command: `cif see VIA2`.<br>3. The metal 3-filled area will now be associated with the VIA2 mask.              |
+
+---
+![image](https://github.com/user-attachments/assets/3c179c55-a2e4-43be-b3ff-538665db0c37)
+![image](https://github.com/user-attachments/assets/2010323b-ae16-4559-b46b-6842f061006b)
+```
+use 'feed clear' to go back to previous view
+```
 
 
 
