@@ -43,6 +43,12 @@
   - [SKY130 TECH FILE LABS](#sky130-tech-file-labs)
     - [CREATE SPICEDECK USING SKY130 TECH](#create-spicedeck-using-sky130-tech)
     - [CHARACTERIZE INVERTER USING SKY130 TECH FILES](#characterize-inverter-using-sky130-tech-files)
+  - [Introduction to Magic Tools and DRC Rules](#introduction-to-magic-tools-and-drc-rules)
+  - [Introduction to SKY130 PDK](#introduction-to-sky130-pdk)
+  - [Introduction to Magic & Steps to Load SKY130 Tech Rules](#introduction-to-magic--steps-to-load-sky130-tech-rules)
+  - [Lab Exercise to Fix Poly-9 Error in SKY130 Tech File](#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
+  - [Lab Challenge Exercise to Describe DRC Error as Geometrical Construct](#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
+  - [Lab Challenge to Find Missing or Incorrect Rules and Fix Them](#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
 
 
 
@@ -640,14 +646,14 @@ In the above layout we have some violations, Open tech file and make changes as 
 
 
 ## Lab challenge to find missing or Incorrect rules and fix them
-After updatinf the tech file, lus ethe following commands:
+After updating the tech file, use the following commands:
 ```
 tech load sky130A.tech
 drc check
 drc style drc(full)
 ```
 ![image](https://github.com/user-attachments/assets/4bfb7e93-8fa6-4969-915d-956d09f2b472)
-Now, we can see as we apply teh contact the errors are removed.
+Now, we can see as we apply the contact the errors are removed.
 
 
 
