@@ -534,7 +534,48 @@ Now, lets open the created spice file:
 
 This contains the spice deck.
 
-## SKY130 Tech file Labs
+## SKY130 TECH FILE LABS
+
+### CREATE SPICEDECK USING SKY130 TECH
+Make the follwoing cahnges in the 'sky130_inv.spice' file:
+![image](https://github.com/user-attachments/assets/2010623a-5770-46d2-a0fa-4d1bf54eeb45)
+
+Now to run the simulation in ngspice, use the follwoing command while being in the 'vsdstdcelldesign' directory:
+```
+ngspice sky130_inv.spice
+```
+![image](https://github.com/user-attachments/assets/db7f79e8-4f05-4cde-96b5-5bfe5f781018)
+
+Now, to open the plot use ```plot y vs time a ``` in ngspice terminal
+![image](https://github.com/user-attachments/assets/9c6e061b-92f7-4fa1-87e2-61b57de96d5a)
+
+### CHARACTERIZE INVERTER USING SKY130 TECH FILES
+To characterize the inverter, we analyzed the ngspice plot and determined the following parameters:
+
+* **Rise Time:** The time for the output waveform to transition from 20% to 80% of its maximum value.
+  
+  From plot points: (x0 = 2.18197e-09, y0 = 0.660482) to (x0 = 2.24571e-09, y0 = 2.64019).
+  Calculated Rise Time = 0.0637 ns
+  
+* **Fall Time:** The time for the output waveform to transition from 80% to 20% of its maximum value.
+
+  From plot points: (x0 = 4.0526e-09, y0 = 2.63973) to (x0 = 4.09512e-09, y0 = 0.659245).
+  Calculated Fall Time = 0.0425 ns
+  
+* **Propagation Delay(Cell Rise Delay)** The time for the output to transition 50% in response to a 50% change at the input.
+
+  From plot points: Input(x0 = 2.15018e-09, y0 = 1.65018) to Output(x0 = 2.21088e-09, y0 = 1.65).
+  Calculated Propagation Delay = 0.060 ns
+  
+* **Cell Fall Delay:** The delay for the output to transition 50% due to a 50% change at the input.
+
+  From plot points: (x0 = 4.04991e-09, y0 = 1.65) to (x0 = 4.07745e-09, y0 = 1.65).
+  Calculated Cell Fall Delay = 0.0275 ns
+  
+With these parameters successfully characterized, the next step is to create a LEF file.
+
+
+
 
 
 
