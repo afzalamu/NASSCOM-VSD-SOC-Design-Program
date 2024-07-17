@@ -10,6 +10,7 @@
   - [Design Preparation Step](#design-preparation-step)
   - [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
   - [Characterization of Synthesized Results](#characterization-of-synthesized-results)
+    
 - [DAY2 THEORY: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#day2-theory-good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
   - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
     - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
@@ -24,6 +25,7 @@
 - [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
   - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
   - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
+    
 - [DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION](#day3-theory--design-library-cell-using-magic-layout-and-ngspice-characterization)
   - [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
   - [INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS](#inception-of-layout--cmos-fabrication-process)
@@ -33,7 +35,7 @@
     - [LIGHTLY DOPED DRAIN (LDD) FORMATION](#lightly-doped-drain-ldd-formation)
     - [SOURCE DRAIN FORMATION](#source-drain-formation)
     - [LOCAL INTERCONNECT FORMATION](#local-interconnect-formation)
-    - [HIGHER LEVEL METAL FORMATION](#higher-level-metal-formation)
+    - [HIGHER LEVEL METAL FORMATION](#higher-level-metal-formation) 
 - [DAY3 LABS :](#day3-labs-)
   - [HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?](#how-to-make-changes-while-being-in-then-flow)
   - [HOW TO GIT CLONE THE "vsdstdcelldesign"](#how-to-git-clone-the-vsdstdcelldesign)
@@ -49,6 +51,12 @@
   - [Lab Exercise to Fix Poly-9 Error in SKY130 Tech File](#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
   - [Lab Challenge Exercise to Describe DRC Error as Geometrical Construct](#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
   - [Lab Challenge to Find Missing or Incorrect Rules and Fix Them](#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
+    
+- [DAY4 Labs: Pre-Layout Timing Analysis & Importance of Good Clock Tree](#day4-labs-pre-layout-timing-analysis--importance-of-good-clock-tree)
+  - [Timing Modelling Using Delay Tables](#timing-modelling-using-delay-tables)
+    - [Converting the Grid Info to Track Info](#converting-the-grid-info-to-track-info)
+    - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
+    - [Introduction to Timing Libs and Steps to Include New Cell in Synthesis](#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
 
 
 
