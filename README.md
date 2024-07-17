@@ -657,6 +657,13 @@ Now, we can see as we apply the contact the errors are removed.
 
 
 
+# DAY4 THEORY: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
+
+## TIMING MODELLING USING DELAY TABLES
+
+### Converting the Grid Info to Track Info
+
+
 
   
 
