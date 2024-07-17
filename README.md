@@ -657,15 +657,90 @@ Now, we can see as we apply the contact the errors are removed.
 
 
 
-# DAY4 THEORY: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
+# DAY4 LABS: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
 
 ## TIMING MODELLING USING DELAY TABLES
 
 ### Converting the Grid Info to Track Info
+**Purpose:**
 
+In physical design, it is essential to convert grid information, such as rows and columns, into track information. Tracks are predefined horizontal and vertical paths on each metal layer.
 
+**Considerations:**
 
+When designing standard cells, consider the following:
+
+Case 1: Input and output ports should align with the intersections of vertical and horizontal tracks.
+Case 2: The standard cell's width should be an odd multiple of the horizontal track pitch, and its height should be an odd multiple of the vertical track pitch.
+
+**LEF File Extraction:**
+
+To continue, we need the LEF (Library Exchange Format) file for the Inverter cell. Extract this file from the current Inverter cell to provide essential information for the place-and-route (PNR) process.
+
+**Understanding Tracks:**
+
+Open the tracks.info file to learn more about the horizontal and vertical tracks available on each metal layer. This file specifies pitch, spacing, and other relevant details necessary for efficient routing.
+
+* Command to open the custom Inverter Layout in Magic, first go to the 'vsdstdcelldesign' dircetory and then use:
+  ```
+  magic -T sky130A.tech sky130_inv.mag &
+  ```
+  ![image](https://github.com/user-attachments/assets/da714e9e-32db-4001-b5de-58e0ee56e7c1)
+
+* Open the tracks.info file to know more about tracks:
+  ```
+  # Fisrt go to the following directory :
+  /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd
+
+  # open the tracks.info file
+  less tracks.info
+  ```
+  ![image](https://github.com/user-attachments/assets/9a8380e7-de59-4682-a84a-fdbf095cb305)
+
+- To set grids as tracks of locali layer, use the follwoing command:
+  ```
+  grid 0.46um 0.34um 0.23um 0.17um
+  ```
+  ![image](https://github.com/user-attachments/assets/583c0ebe-5852-41c9-af4a-5aab981d9ea3)
   
+  Now, we can see in the below image , that the Case 1 consideration is met i.e. Input and output ports are aligned with the intersections of vertical and horizontal tracks.
+  ![image](https://github.com/user-attachments/assets/80f04067-318a-49c6-97a3-33b1ffac7f28)
+  Now, we can see in the below image , that the Case 2 consideration are also met as 3 boxes are covered between the boundariesi.e. The standard cell's width should be an odd multiple of the horizontal track pitch, and its height     should be an odd multiple of the vertica track pitch.
+  ![image](https://github.com/user-attachments/assets/61fbdc5c-3b97-48c5-947b-0a355681f015)
+  ![image](https://github.com/user-attachments/assets/26b1a068-37fe-4408-b627-97f1b99079c9)
+
+  - How to convert labels to ports *[No need to do it here as it is already done]*:
+    ![image](https://github.com/user-attachments/assets/65cb992f-3965-4eba-ba36-09414af9b3a2)
+    
+  ## Converting magic layout to standard cell LEF
+   *Follow this Github Repository For more deatils: * [Click here](https://github.com/nickson-jose/vsdstdcelldesign)
+  Now, setting up the ports type:
+  ![image](https://github.com/user-attachments/assets/bd4878b6-e001-43e4-86a3-e4a66d2f10d9)
+  ![image](https://github.com/user-attachments/assets/0e5e2138-11ce-47d7-9d47-251a01f74cc6)
+  ![image](https://github.com/user-attachments/assets/007c1a62-367f-4a23-9ff2-0cc0d506400f)
+  ![image](https://github.com/user-attachments/assets/68d743d9-0a1e-4308-b457-f6ad79705bc0)
+
+  Now we need to extract the LEF file. First save .mag file by using the command ``save sky130_vsdinv.mag``` in the tkcon terminal.
+  ![image](https://github.com/user-attachments/assets/6edb6cf6-a688-4910-b2a2-875637e06c78)
+  
+  Now, use the follwoing command to open the saved mag file:
+  ```
+  magic -T sky130A.tch sky130_vsdinv.mag &
+  ```
+  ![image](https://github.com/user-attachments/assets/e5e5b29c-306e-4613-942a-465ed92fa7d5)
+
+  Now, us ethe follwoing command in tckon window:
+  ```
+  # To extract the Lef file use the command:
+  lef write
+  ```
+  ![image](https://github.com/user-attachments/assets/e12a0f56-8e47-4717-97af-32c8ff91b845)
+  Now, open the file ``` less sky130_vsdinv.lef```
+  ![image](https://github.com/user-attachments/assets/6fb07bff-948c-4797-91b2-f3ad2be1dae3)
+
+  ## Introduction to timing libs and steps to include new cell in synthesis
+
+
 
 
 
