@@ -663,6 +663,11 @@ drc style drc(full)
 ![image](https://github.com/user-attachments/assets/4bfb7e93-8fa6-4969-915d-956d09f2b472)
 Now, we can see as we apply the contact the errors are removed.
 
+# DAY4 LABS: THEORETICAL CONCEPTS
+
+## Introduction to delay tables
+![image](https://github.com/user-attachments/assets/0b14100e-35e3-43fd-bde8-63f42c77cd70)
+
 
 
 # DAY4 LABS: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
