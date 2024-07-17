@@ -747,8 +747,42 @@ Open the tracks.info file to learn more about the horizontal and vertical tracks
   ![image](https://github.com/user-attachments/assets/6fb07bff-948c-4797-91b2-f3ad2be1dae3)
 
   ## Introduction to timing libs and steps to include new cell in synthesis
+  Now, first copy the files in src directory, us ethe following command:
+  ```
+  cp sky130_vsdinv.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src
+  ```
+  ![image](https://github.com/user-attachments/assets/e1c17c20-4059-4caf-862c-2c635f90a980)
+  Now, basic idea is to include our custom cell in picorv32a openlane design flow
+  Also, copy the follwoing files shown in image below in src directory, us the following command:
+  ![image](https://github.com/user-attachments/assets/fdafbd6b-2200-454e-b74f-5617857b0dba)
+  ```
+  cp sky130_fd_sc_hd__* /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src
+  ```
+  ![image](https://github.com/user-attachments/assets/61f4e306-528c-4cfa-8e5a-957be5a9cdeb)
+  Now, we need to modify the config.tcl file:
+  Go to picorv32a dircetory and open the file using vim
+  ```
+  vim config.tcl
+  ```
+  make the following modifications:
+  ![image](https://github.com/user-attachments/assets/c221cf9b-9d2a-4eac-aa81-de4632847b67)
+  Now, invoke the docker:
+  ![image](https://github.com/user-attachments/assets/6945cc20-7fbb-4ace-9a92-e6bf4e198151)
+  Now, do the regular steps as shown:
+  ```
+  ./flow.tcl -interactive
+  package require openlane 0.9
 
-
+  #to continue the work in already made directory in runs folder
+  prep -design picorv32a -tag 12-07_11-26 -overwrite
+  ```
+  This will continue our work in '12-07_11-26' and '-overwrite' will continue the work with the chanegs we made and overwrite them.
+  ![image](https://github.com/user-attachments/assets/61bc6b5a-89c2-48cd-b62f-f0a1b8878646)
+   Now run synthesis ```run_synthesis```
+  ![image](https://github.com/user-attachments/assets/0e16b94c-c4a5-4a31-8a36-7afea30c59c9)
+  ![image](https://github.com/user-attachments/assets/6f62332d-2cbb-41f3-8295-f0241cec8f51)
+  From the figure above, it is evident that the synthesis was successful, with a total of 1554 instances of our vsdinverter. Therefore, this stage has been completed successfully.
+  
 
 
 
