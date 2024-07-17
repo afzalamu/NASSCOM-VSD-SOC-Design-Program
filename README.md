@@ -667,7 +667,8 @@ Now, we can see as we apply the contact the errors are removed.
 
 ## Introduction to delay tables
 ![image](https://github.com/user-attachments/assets/0b14100e-35e3-43fd-bde8-63f42c77cd70)
-
+![image](https://github.com/user-attachments/assets/a96e61d8-e7bf-4944-839f-53991fd756e7)
+At every level , each node  is driving the same load, hence there is no skew, if there would be a case with different loads then there will be skew.
 
 
 # DAY4 LABS: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
