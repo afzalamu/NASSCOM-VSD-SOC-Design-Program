@@ -674,6 +674,7 @@ At every level , each node  is driving the same load, hence there is no skew, if
 ![image](https://github.com/user-attachments/assets/bdcf4277-83ff-4631-b4b8-c4b4be887026)
 ![image](https://github.com/user-attachments/assets/540dd2bb-2d28-44ab-8462-28e82b7f2aac)
 ![image](https://github.com/user-attachments/assets/7fd8c791-57e4-4b05-ba5a-c17da5d3dde6)
+![image](https://github.com/user-attachments/assets/4f8e59b2-40bd-47e0-9140-35769fb80035)
 
 
 # DAY4 LABS: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
@@ -748,7 +749,7 @@ Open the tracks.info file to learn more about the horizontal and vertical tracks
   ```
   ![image](https://github.com/user-attachments/assets/e5e5b29c-306e-4613-942a-465ed92fa7d5)
 
-  Now, us ethe follwoing command in tckon window:
+  Now, us the follwoing command in tckon window:
   ```
   # To extract the Lef file use the command:
   lef write
