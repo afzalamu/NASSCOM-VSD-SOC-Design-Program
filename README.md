@@ -788,7 +788,31 @@ Open the tracks.info file to learn more about the horizontal and vertical tracks
   ![image](https://github.com/user-attachments/assets/0e16b94c-c4a5-4a31-8a36-7afea30c59c9)
   ![image](https://github.com/user-attachments/assets/6f62332d-2cbb-41f3-8295-f0241cec8f51)
   From the figure above, it is evident that the synthesis was successful, with a total of 1554 instances of our vsdinverter. Therefore, this stage has been completed successfully.
-  
+  From the above figure we can see the worst slack is -23.89 and total negative slack is -711.59.
+
+  ## Steps to configure synthesis settings to fix slack and include vsdinv
+  Chip area for module '\picorv32a': 147712.918400
+  See the Readme File in configuration directory:
+  ![image](https://github.com/user-attachments/assets/f6c21b7f-79ff-4620-965b-03a56a6e57d9)
+
+  - Commands to view and change parameters to improve timing and run synthesis:
+
+| Step | Command | Description |
+|------|---------|-------------|
+| 1 | `prep -design picorv32a -tag 24-03_10-03 -overwrite` | Prepare the design for updating variables |
+| 2 | `set lefs [glob $::env(DESIGN_DIR)/src/*.lef]` | Include newly added LEF files in the OpenLane flow |
+| 3 | `add_lefs -src $lefs` | Merge the LEF files |
+| 4 | `echo $::env(SYNTH_STRATEGY)` | Display the current value of the `SYNTH_STRATEGY` variable |
+| 5 | `set ::env(SYNTH_STRATEGY) "DELAY 3"` | Set a new value for the `SYNTH_STRATEGY` variable |
+| 6 | `echo $::env(SYNTH_BUFFERING)` | Check if `SYNTH_BUFFERING` is enabled by displaying its current value |
+| 7 | `echo $::env(SYNTH_SIZING)` | Display the current value of the `SYNTH_SIZING` variable |
+| 8 | `set ::env(SYNTH_SIZING) 1` | Set a new value for the `SYNTH_SIZING` variable |
+| 9 | `echo $::env(SYNTH_DRIVING_CELL)` | Check the current value of `SYNTH_DRIVING_CELL` to ensure it's the correct cell |
+| 10 | `run_synthesis` | Run the synthesis process after the design is prepared |
+![image](https://github.com/user-attachments/assets/bdad3276-f68e-4e2f-8ecc-7e005d80fd94)
+![image](https://github.com/user-attachments/assets/cc2b649c-dc83-4cbb-8bb6-00f9e4349733)
+Now, tns and wns is zero and  Chip area for module '\picorv32a': 181730.544000 is increased now.
+Now ```run_floorplan```
 
 
 
