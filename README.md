@@ -906,6 +906,14 @@ puts "\[INFO\]: Setting load to: $cap_load"
 
 set_load $cap_load [all_outputs]
 ```
+Now use the command:
+```
+sta pre_sta.conf
+```
+
+![image](https://github.com/user-attachments/assets/da3b3966-58af-4dca-9775-f582ba5751ab)
+Hence, slack is met.
+
 
 
 
