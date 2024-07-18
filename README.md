@@ -921,6 +921,25 @@ sta pre_sta.conf
 Hence, slack is met.
 
 
+## Steps to run CTS using TritonCTS
+
+To update the previous design with the improved version, use the command:
+
+```
+write_verilog //path of the previous design//
+#In our case:
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis.v
+```
+![image](https://github.com/user-attachments/assets/5e371a72-da7d-478b-aecb-9fa09d20abd9)
+
+
+This will replace the old design with the optimized one. Once the update is complete, proceed with the Floorplan stage using the same commands as before. Upon successful completion of the Floorplan, proceed to the placement step by running the command:
+
+```
+run_placement
+```
+as we can see from the below images file has been overwritten
+![image](https://github.com/user-attachments/assets/38536f10-9291-43fb-a2f6-82cde40cc2fa)
 
 
 
