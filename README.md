@@ -776,7 +776,7 @@ Open the tracks.info file to learn more about the horizontal and vertical tracks
   vim config.tcl
   ```
   make the following modifications:
-  ![image](https://github.com/user-attachments/assets/c221cf9b-9d2a-4eac-aa81-de4632847b67)
+  ![image](https://github.com/user-attachments/assets/697bcfe9-219e-4d84-9e8e-386b7d4f6531)
   Now, invoke the docker:
   ![image](https://github.com/user-attachments/assets/6945cc20-7fbb-4ace-9a92-e6bf4e198151)
   Now, do the regular steps as shown:
