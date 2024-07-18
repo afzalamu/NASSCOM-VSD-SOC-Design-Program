@@ -941,6 +941,19 @@ run_placement
 as we can see from the below images file has been overwritten
 ![image](https://github.com/user-attachments/assets/38536f10-9291-43fb-a2f6-82cde40cc2fa)
 
+![image](https://github.com/user-attachments/assets/4002e1fd-3ec4-4d68-a456-b9ddb4ef504c)
+Now after the placement has  been completed, we go for CTS:
+```
+run_cts
+```
+![image](https://github.com/user-attachments/assets/ec0773d9-8a44-4297-8115-b113b444a96b)
+
+In cts stage buffers get added , modifying the netlist. After completion of the cts we can observe that in the synthesis results directory a new .cts file is added. The newly added CTS file contains both the previous netlist and also the clock buffers that were added during the cts stage.
+
+![image](https://github.com/user-attachments/assets/1dbb93cf-f5bc-4e89-9d3f-2fa7f8ff4187)
+
+
+
 
 
 
