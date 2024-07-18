@@ -846,6 +846,66 @@ now let us check its alignment is correct or not use command 'expand' in 'tckon'
 ![image](https://github.com/user-attachments/assets/05e925f3-2a76-4505-a57c-8f144e896a4e)
 
 
+# Timing analysis with ideal clocks using openSTA
+
+## Configure OpenSTA for post-synth timing analysis
+
+Next stage is to perform STA on the design:
+First create 'pre_sta.conf' file in the openlane directory as shiown below:
+![image](https://github.com/user-attachments/assets/45121ad5-0b64-4764-8005-9112283da803)
+```
+set_cmd_units -time ns -capacitance pF -current mA -voltage V -resistance kOhm -distance um
+read_liberty -max /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib
+read_liberty -min /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib
+read_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis.v
+link_design picorv32a
+read_sdc /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/my_base.sdc
+report_checks -path_delay min_max -fields {slew trans net cap input_pins}
+report_tns
+report_wns
+```
+
+and then create 'my_base.sdc' file in the /picorv32a/src directory as shown below:
+![image](https://github.com/user-attachments/assets/e8cd06f5-7f1d-4c4c-a8fe-c5fda8ba82bb)
+```
+
+
+set ::env(CLOCK_PORT) clk
+set ::env(CLOCK_PERIOD) 24.73
+set ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
+set ::env(SYNTH_DRIVING_CELL_PIN) Y
+set ::env(SYNTH_CAP_LOAD) 17.653
+set ::env(IO_PCT) 0.2
+set ::env(SYNTH_MAX_FANOUT) 6
+
+create_clock [get_ports $::env(CLOCK_PORT)]  -name $::env(CLOCK_PORT)  -period $::env(CLOCK_PERIOD)
+
+set input_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+set output_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+
+puts "\[INFO\]: Setting output delay to: $output_delay_value"
+puts "\[INFO\]: Setting input delay to: $input_delay_value"
+
+set_max_fanout $::env(SYNTH_MAX_FANOUT) [current_design]
+
+set clk_indx [lsearch [all_inputs] [get_port $::env(CLOCK_PORT)]]
+
+set all_inputs_wo_clk [lreplace [all_inputs] $clk_indx $clk_indx]
+
+set all_inputs_wo_clk_rst $all_inputs_wo_clk
+
+set_input_delay $input_delay_value -clock [get_clocks $::env(CLOCK_PORT)] $all_inputs_wo_clk_rst
+
+set_output_delay $output_delay_value -clock [get_clocks $::env(CLOCK_PORT)] [all_outputs]
+
+set_driving_cell -lib_cell $::env(SYNTH_DRIVING_CELL) -pin $::env(SYNTH_DRIVING_CELL_PIN) [all_inputs]
+
+set cap_load [expr $::env(SYNTH_CAP_LOAD) /1000.0]
+
+puts "\[INFO\]: Setting load to: $cap_load"
+
+set_load $cap_load [all_outputs]
+```
 
 
 
