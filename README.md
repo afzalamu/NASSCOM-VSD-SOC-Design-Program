@@ -816,7 +816,34 @@ Open the tracks.info file to learn more about the horizontal and vertical tracks
 
 Now, tns and wns is zero and  Chip area for module '\picorv32a': 181730.544000 is increased now.
 Now ```run_floorplan```
+![image](https://github.com/user-attachments/assets/674001ab-313e-4dcf-aa12-12587ad8481d)
+As we can see from the above image, it is failed.
+So, run these:
 
+```
+init_floorplan
+place_io
+tap_decap_or
+```
+![image](https://github.com/user-attachments/assets/25879e69-e876-4db9-b3de-8f8a13f1efdf)
+
+Now, as floorplan stage is completed , we run placement
+```
+run_placement
+```
+![image](https://github.com/user-attachments/assets/f874d70c-a6e0-4b84-bb14-4e5819e5c6da)
+
+Now, lets check whether the cell that we have created has been included in the design or not.
+Go to the follwoing directory in image:
+![image](https://github.com/user-attachments/assets/affd2bd5-3776-4fa8-a1d3-884fecb57777)
+use :
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+```
+![image](https://github.com/user-attachments/assets/a4ac2baa-5d8d-4a33-8f31-7395e45781e7)
+we cans ee that the cell is successfully placed in the deisgn.
+now let us check its alignment is correct or not use command 'expand' in 'tckon' window.
+![image](https://github.com/user-attachments/assets/05e925f3-2a76-4505-a57c-8f144e896a4e)
 
 
 
