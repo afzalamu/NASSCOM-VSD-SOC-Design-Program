@@ -809,8 +809,11 @@ Open the tracks.info file to learn more about the horizontal and vertical tracks
 | 8 | `set ::env(SYNTH_SIZING) 1` | Set a new value for the `SYNTH_SIZING` variable |
 | 9 | `echo $::env(SYNTH_DRIVING_CELL)` | Check the current value of `SYNTH_DRIVING_CELL` to ensure it's the correct cell |
 | 10 | `run_synthesis` | Run the synthesis process after the design is prepared |
+
 ![image](https://github.com/user-attachments/assets/bdad3276-f68e-4e2f-8ecc-7e005d80fd94)
+
 ![image](https://github.com/user-attachments/assets/cc2b649c-dc83-4cbb-8bb6-00f9e4349733)
+
 Now, tns and wns is zero and  Chip area for module '\picorv32a': 181730.544000 is increased now.
 Now ```run_floorplan```
 
