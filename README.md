@@ -670,6 +670,11 @@ Now, we can see as we apply the contact the errors are removed.
 ![image](https://github.com/user-attachments/assets/a96e61d8-e7bf-4944-839f-53991fd756e7)
 At every level , each node  is driving the same load, hence there is no skew, if there would be a case with different loads then there will be skew.
 
+## Introduction to CTS
+![image](https://github.com/user-attachments/assets/bdcf4277-83ff-4631-b4b8-c4b4be887026)
+![image](https://github.com/user-attachments/assets/540dd2bb-2d28-44ab-8462-28e82b7f2aac)
+![image](https://github.com/user-attachments/assets/7fd8c791-57e4-4b05-ba5a-c17da5d3dde6)
+
 
 # DAY4 LABS: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
 
