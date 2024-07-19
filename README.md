@@ -966,7 +966,14 @@ use the below given command to enter into openRoad:
 openroad
 ```
 In openroad, We will first create the database (creted from lef and def files) and in the timing analysis this db is used.
+Run the follwoing commands:
+```
 read_lef /openLANE_flow/designs/picorv32a/runs/24-03_10-03/tmp/merged.lef
+```
+![image](https://github.com/user-attachments/assets/091a8a58-9aed-41c7-8cf4-9ad9271bc91d)
+
+```
+read_def /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/cts/picorv32a.cts.def
 
 
 
