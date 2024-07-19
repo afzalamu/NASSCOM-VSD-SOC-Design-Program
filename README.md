@@ -993,6 +993,6 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4
 ![image](https://github.com/user-attachments/assets/58b484f8-f318-4565-9b70-e33cd0d0b3c4)
 
 
-
+## Steps to execute OpenSTA with right timing libraries and CTS assignment
 
 
