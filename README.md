@@ -994,5 +994,74 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
 
 ## Steps to execute OpenSTA with right timing libraries and CTS assignment
+First use ```exit`` to exit from openroad, now you will come to openlane:
+Now follow these steps:
+To check the current value of CTS_CLK_BUFFER_LIST
+```
+echo $::env(CTS_CLK_BUFFER_LIST)
+```
+![image](https://github.com/user-attachments/assets/e906776e-e6cc-413e-8864-92429d5fed0b)
+
+To remove sky130_fd_sc_hd__clkbuf_1 from the list
+```
+set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
+```
+![image](https://github.com/user-attachments/assets/81c0a668-a981-4410-ac1f-246ec76e5beb)
+
+Now, To check we run the cts agian ```run_cts```
+
+Now, it will failed or in hung state then kill this task
+
+To check the current value of CURRENT_DEF
+```
+echo $::env(CURRENT_DEF)
+```
+![image](https://github.com/user-attachments/assets/0784969d-fa4d-45f4-a4c0-74c831acd760)
+To set def as placement def
+```
+set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/placement/picorv32a.placement.def
+```
+![image](https://github.com/user-attachments/assets/0755db98-c683-4a91-b6c6-e2bd568e4198)
+To check the current value of CTS_CLK_BUFFER_LIST
+```
+echo $::env(CTS_CLK_BUFFER_LIST)
+```
+![image](https://github.com/user-attachments/assets/eb9794bb-04cb-41ee-94b0-5bd307f300f2)
+
+Now run_cts again.
 
 
+Now, We need to follow the similar steps that we have followed earlier in the openroad.
+go to openroad again and then:
+```
+read_lef /openLANE_flow/designs/picorv32a/runs/12-07_11-26/tmp/merged.lef
+
+read_def /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/cts/picorv32a.cts.def
+
+write_db pico_cts1.db
+
+read_db pico_cts1.db
+
+read_verilog /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/synthesis/picorv32a.synthesis_cts.v
+
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+
+link_design picorv32a
+
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+
+set_propagated_clock [all_clocks]
+
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+```
+![image](https://github.com/user-attachments/assets/42248361-de62-4345-bff0-40266cf3d969)
+The setup slack has improved if we use clock_buf_2 now. But there is a tradeoff with the area.
+```
+report_clock_skew -hold
+```
+![image](https://github.com/user-attachments/assets/275bd6dd-6fb6-4707-8562-379cfa95cd8d)
+
+```
+report_clock_skew -setup
+```
+![image](https://github.com/user-attachments/assets/49b918e1-5edd-46f9-a0cd-360061537577)
