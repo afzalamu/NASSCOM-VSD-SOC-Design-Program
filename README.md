@@ -676,6 +676,13 @@ At every level , each node  is driving the same load, hence there is no skew, if
 ![image](https://github.com/user-attachments/assets/7fd8c791-57e4-4b05-ba5a-c17da5d3dde6)
 ![image](https://github.com/user-attachments/assets/4f8e59b2-40bd-47e0-9140-35769fb80035)
 
+# TIMING ANALYSIS
+* Setup Timing Analysis
+![image](https://github.com/user-attachments/assets/3e2b6ea2-2788-4f50-be12-24bf49ba8f03)
+* Hold Timing Analysis
+![image](https://github.com/user-attachments/assets/cd7e38c5-d9e1-4662-82e6-dd381f68ab5e)
+
+![image](https://github.com/user-attachments/assets/97ef2e04-a6e1-4b3f-a149-1a89900b20ed)
 
 # DAY4 LABS: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
 
