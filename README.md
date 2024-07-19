@@ -961,7 +961,12 @@ In cts stage buffers get added , modifying the netlist. After completion of the 
 
 
 ## Timing analysis with real clocks using openSTA
-
+use the below given command to enter into openRoad:
+```
+openroad
+```
+In openroad, We will first create the database (creted from lef and def files) and in the timing analysis this db is used.
+read_lef /openLANE_flow/designs/picorv32a/runs/24-03_10-03/tmp/merged.lef
 
 
 
