@@ -953,6 +953,9 @@ In cts stage buffers get added , modifying the netlist. After completion of the 
 ![image](https://github.com/user-attachments/assets/1dbb93cf-f5bc-4e89-9d3f-2fa7f8ff4187)
 
 
+## Timing analysis with real clocks using openSTA
+
+
 
 
 
