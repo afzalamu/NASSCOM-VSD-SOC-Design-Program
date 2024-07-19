@@ -968,13 +968,21 @@ openroad
 In openroad, We will first create the database (creted from lef and def files) and in the timing analysis this db is used.
 Run the follwoing commands:
 ```
-read_lef /openLANE_flow/designs/picorv32a/runs/24-03_10-03/tmp/merged.lef
+read_lef /openLANE_flow/designs/picorv32a/runs/12-07_11-26/tmp/merged.lef
 ```
 ![image](https://github.com/user-attachments/assets/091a8a58-9aed-41c7-8cf4-9ad9271bc91d)
 
 ```
-read_def /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/cts/picorv32a.cts.def
+read_def /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/cts/picorv32a.cts.def
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
+```
 
 
 
