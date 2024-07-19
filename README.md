@@ -970,11 +970,18 @@ Run the follwoing commands:
 ```
 read_lef /openLANE_flow/designs/picorv32a/runs/12-07_11-26/tmp/merged.lef
 ```
-![image](https://github.com/user-attachments/assets/091a8a58-9aed-41c7-8cf4-9ad9271bc91d)
+![image](https://github.com/user-attachments/assets/b493d9eb-f1da-4148-9804-b97aaf8350c2)
+
 
 ```
 read_def /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/cts/picorv32a.cts.def
+```
+![image](https://github.com/user-attachments/assets/6f180bab-9023-4737-ae3a-562f224b5ed9)
+```
 write_db pico_cts.db
+```
+![image](https://github.com/user-attachments/assets/fb38de22-564e-4d85-ae95-2ec79d92220d)
+```
 read_db pico_cts.db
 read_verilog /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/synthesis/picorv32a.synthesis_cts.v
 read_liberty $::env(LIB_SYNTH_COMPLETE)
@@ -983,6 +990,7 @@ set_propagated_clock [all_clocks]
 report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
 ```
+![image](https://github.com/user-attachments/assets/58b484f8-f318-4565-9b70-e33cd0d0b3c4)
 
 
 
