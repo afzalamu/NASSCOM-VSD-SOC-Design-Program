@@ -1065,3 +1065,17 @@ report_clock_skew -hold
 report_clock_skew -setup
 ```
 ![image](https://github.com/user-attachments/assets/49b918e1-5edd-46f9-a0cd-360061537577)
+
+### Now if we want to include buf_1 again?
+Exit the openroad first.
+To check the current value of CTS_CLK_BUFFER_LIST
+```
+echo $::env(CTS_CLK_BUFFER_LIST)
+```
+![image](https://github.com/user-attachments/assets/096e422b-2580-4af0-8a46-24b0a75774ce)
+
+To insert sky130_fd_sc_hd__clkbuf_1 from the list
+```
+set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_sc_hd__clkbuf_1]
+```
+![image](https://github.com/user-attachments/assets/f30b8304-952c-4aa1-9643-82d66f76eea5)
