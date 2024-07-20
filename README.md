@@ -697,7 +697,7 @@ At every level , each node  is driving the same load, hence there is no skew, if
 
 ![image](https://github.com/user-attachments/assets/97ef2e04-a6e1-4b3f-a149-1a89900b20ed)
 
-# DAY4 LABS: PRE-LAYOUT LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
+# DAY4 LABS: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
 
 ## TIMING MODELLING USING DELAY TABLES
 
