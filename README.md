@@ -1,4 +1,5 @@
 # NASSCOM-VSD-SOC-Design-Program
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 
 ## Table of Contents
 - [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
