@@ -1119,6 +1119,16 @@ Now, from the above image we can see PDN is successfully generated.
 ![image](https://github.com/user-attachments/assets/2b882aa8-1973-4193-a2d4-a8d7ae621e47)
 Now, can see that the pitch of the standard cell rails is 2.720, which we have expected.
 
+## Steps from power straps to std cell power
+![image](https://github.com/user-attachments/assets/611e293f-2b07-42c9-bf36-3cfabe9e284b)
+
+In the figure above, we can see how power is distributed to the standard cells.
+Surrounding the design are I/O pads, with the red and blue blocks representing power pads. The red pads supply power, while the blue ones provide the ground connection.
+These pads connect to power and ground rings that encircle the design, supplying power to straps.
+The vertical lines seen for the rings are known as power straps.
+Connections from the power straps and rings extend to the power rails, with standard cells positioned between these rails. The height of the standard cells must be multiples of the rail pitch to ensure proper power and ground supply.
+
+## Basics of global and detail routing and configure TritonRoute
 
 # References
 
