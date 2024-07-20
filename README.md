@@ -1080,4 +1080,10 @@ set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_
 ```
 ![image](https://github.com/user-attachments/assets/f30b8304-952c-4aa1-9643-82d66f76eea5)
 
+## References
 
+This project has utilized resources and materials from the following sources:
+
+- [VSD Standard Cell Design](https://github.com/nickson-jose/vsdstdcelldesign)
+- [Google Skywater PDK](https://github.com/google/skywater-pdk)
+- Materials provided in the NASSCOM VSD SoC Design Program
