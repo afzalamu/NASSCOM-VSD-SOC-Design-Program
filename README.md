@@ -56,7 +56,7 @@
   - [Introduction to delay tables](#introduction-to-delay-tables)
   - [Introduction to CTS](#introduction-to-cts)
   - [TIMING ANALYSIS](#timing-analysis)
-- [DAY4 Labs: Pre-Layout Timing Analysis & Importance of Good Clock Tree](#day4-labs-pre-layout-timing-analysis--importance-of-good-clock-tree)
+- [DAY4 LABS: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE](#day4-labs-pre-layout-timing-analysis--importance-of-good-clock-tree)
   - [Timing Modelling Using Delay Tables](#timing-modelling-using-delay-tables)
     - [Converting the Grid Info to Track Info](#converting-the-grid-info-to-track-info)
     - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
