@@ -1093,6 +1093,15 @@ set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_
 ```
 ![image](https://github.com/user-attachments/assets/f30b8304-952c-4aa1-9643-82d66f76eea5)
 
+# Final steps for RTL2GDS using tritonRoute and openSTA
+## Steps to build power distribution network
+As the CST stage is compelted, now we need to lay down the Power Distribution Network.
+Use the folloeing command ```gen_pdn```.
+![image](https://github.com/user-attachments/assets/7b9acd59-e548-4c74-8051-30f73a831278)
+![image](https://github.com/user-attachments/assets/cc1652d1-adfe-4b47-9e4b-1be2a3578805)
+Now, from the above image we can see PDN is successfully generated.
+
+
 # References
 
 This project has utilized resources and materials from the following sources:
