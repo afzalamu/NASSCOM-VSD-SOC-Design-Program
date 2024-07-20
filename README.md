@@ -1,4 +1,4 @@
-# NASSCOM-VSD-SOC-Design-Program
+![image](https://github.com/user-attachments/assets/f41df24a-8273-4b03-8113-72d31b745b38)# NASSCOM-VSD-SOC-Design-Program
 
 ## Table of Contents
 - [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
@@ -1093,7 +1093,23 @@ set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_
 ```
 ![image](https://github.com/user-attachments/assets/f30b8304-952c-4aa1-9643-82d66f76eea5)
 
-# Final steps for RTL2GDS using tritonRoute and openSTA
+# DAY 5: Final steps for RTL2GDS using tritonRoute and openSTA
+## Introduction to Routing Algorithm
+* Maze Routing
+  ![image](https://github.com/user-attachments/assets/cea1a2e7-9d15-4b59-89c1-c280f8829384)
+  ![image](https://github.com/user-attachments/assets/06521a9e-571f-4864-b1f0-f1561c328b79)
+
+  Routing grid is build with standard dimensions
+  ![image](https://github.com/user-attachments/assets/a30e4231-6ca6-4160-9f6c-8584faa4a665)
+  Algorithm utilises this routing grod to find the best route between the source and the target.
+  ![image](https://github.com/user-attachments/assets/276fd90f-51a3-4003-94ea-ddc7709eebff)
+  ![image](https://github.com/user-attachments/assets/76dcfad2-9ae2-4e62-8a6e-2618504b3e06)
+  ![image](https://github.com/user-attachments/assets/2c7ed45a-974d-4ea0-877f-8d28d8e1f85c)
+  There are various routes possible, but routes with less band s are preferred (preferable single band).
+  There are other algorithms too in its replacement as it is more time consuming.
+  ![image](https://github.com/user-attachments/assets/6b6218c9-35b9-4eff-8d1d-384e8d9ead4c)
+* While doing routing , DRC Rules need to be followed.
+  
 ## Steps to build power distribution network
 As the CST stage is compelted, now we need to lay down the Power Distribution Network.
 Use the folloeing command ```gen_pdn```.
