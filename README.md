@@ -1100,6 +1100,8 @@ Use the folloeing command ```gen_pdn```.
 ![image](https://github.com/user-attachments/assets/7b9acd59-e548-4c74-8051-30f73a831278)
 ![image](https://github.com/user-attachments/assets/cc1652d1-adfe-4b47-9e4b-1be2a3578805)
 Now, from the above image we can see PDN is successfully generated.
+![image](https://github.com/user-attachments/assets/2b882aa8-1973-4193-a2d4-a8d7ae621e47)
+Now, can see that the pitch of the standard cell rails is 2.720, which we have expected.
 
 
 # References
