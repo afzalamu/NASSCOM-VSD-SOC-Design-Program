@@ -62,12 +62,12 @@
     - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
     - [Introduction to Timing Libs and Steps to Include New Cell in Synthesis](#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
     - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
-- [Timing analysis with ideal clocks using openSTA](#timing-analysis-with-ideal-clocks-using-opensta)
-  - [Configure OpenSTA for post-synth timing analysis](#configure-opensta-for-post-synth-timing-analysis)
-  - [Steps to run CTS using TritonCTS](#steps-to-run-cts-using-tritoncts)
-- [Timing analysis with real clocks using openSTA](#timing-analysis-with-real-clocks-using-opensta)
-  - [Steps to execute OpenSTA with right timing libraries and CTS assignment](#steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
-  - [Now if we want to include buf_1 again?](#now-if-we-want-to-include-buf_1-again)
+  - [Timing analysis with ideal clocks using openSTA](#timing-analysis-with-ideal-clocks-using-opensta)
+    - [Configure OpenSTA for post-synth timing analysis](#configure-opensta-for-post-synth-timing-analysis)
+    - [Steps to run CTS using TritonCTS](#steps-to-run-cts-using-tritoncts)
+  - [Timing analysis with real clocks using openSTA](#timing-analysis-with-real-clocks-using-opensta)
+    - [Steps to execute OpenSTA with right timing libraries and CTS assignment](#steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
+    - [Now if we want to include buf_1 again?](#now-if-we-want-to-include-buf_1-again)
 
 - [References](#references)
 
