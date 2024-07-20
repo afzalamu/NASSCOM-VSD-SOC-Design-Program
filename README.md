@@ -51,12 +51,25 @@
   - [Lab Exercise to Fix Poly-9 Error in SKY130 Tech File](#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
   - [Lab Challenge Exercise to Describe DRC Error as Geometrical Construct](#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
   - [Lab Challenge to Find Missing or Incorrect Rules and Fix Them](#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
-    
+
+- [DAY4: THEORETICAL CONCEPTS](#day4-theoretical-concepts)
+  - [Introduction to delay tables](#introduction-to-delay-tables)
+  - [Introduction to CTS](#introduction-to-cts)
+  - [TIMING ANALYSIS](#timing-analysis)
 - [DAY4 Labs: Pre-Layout Timing Analysis & Importance of Good Clock Tree](#day4-labs-pre-layout-timing-analysis--importance-of-good-clock-tree)
   - [Timing Modelling Using Delay Tables](#timing-modelling-using-delay-tables)
     - [Converting the Grid Info to Track Info](#converting-the-grid-info-to-track-info)
     - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
     - [Introduction to Timing Libs and Steps to Include New Cell in Synthesis](#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
+    - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
+- [Timing analysis with ideal clocks using openSTA](#timing-analysis-with-ideal-clocks-using-opensta)
+  - [Configure OpenSTA for post-synth timing analysis](#configure-opensta-for-post-synth-timing-analysis)
+  - [Steps to run CTS using TritonCTS](#steps-to-run-cts-using-tritoncts)
+- [Timing analysis with real clocks using openSTA](#timing-analysis-with-real-clocks-using-opensta)
+  - [Steps to execute OpenSTA with right timing libraries and CTS assignment](#steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
+  - [Now if we want to include buf_1 again?](#now-if-we-want-to-include-buf_1-again)
+
+- [References](#references)
 
 
 
@@ -1080,7 +1093,7 @@ set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_
 ```
 ![image](https://github.com/user-attachments/assets/f30b8304-952c-4aa1-9643-82d66f76eea5)
 
-## References
+# References
 
 This project has utilized resources and materials from the following sources:
 
