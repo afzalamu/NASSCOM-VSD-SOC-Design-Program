@@ -663,7 +663,7 @@ drc style drc(full)
 ![image](https://github.com/user-attachments/assets/4bfb7e93-8fa6-4969-915d-956d09f2b472)
 Now, we can see as we apply the contact the errors are removed.
 
-# DAY4 LABS: THEORETICAL CONCEPTS
+# DAY4 : THEORETICAL CONCEPTS
 
 ## Introduction to delay tables
 ![image](https://github.com/user-attachments/assets/0b14100e-35e3-43fd-bde8-63f42c77cd70)
