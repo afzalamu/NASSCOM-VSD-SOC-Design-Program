@@ -1127,8 +1127,15 @@ Surrounding the design are I/O pads, with the red and blue blocks representing p
 These pads connect to power and ground rings that encircle the design, supplying power to straps.
 The vertical lines seen for the rings are known as power straps.
 Connections from the power straps and rings extend to the power rails, with standard cells positioned between these rails. The height of the standard cells must be multiples of the rail pitch to ensure proper power and ground supply.
-
+![image](https://github.com/user-attachments/assets/62641ee0-53ab-43d2-ba31-c8f0a3150161)
+Now, we can see def has been modifoed from cts to pdn.
 ## Basics of global and detail routing and configure TritonRoute
+Now the last stage in the design is Routing , us ethe following command: 
+```
+run_routing
+```
+### Routing using TritonRoute
+![image](https://github.com/user-attachments/assets/bdf1ee06-3092-4f06-970d-632618d4438c)
 
 # References
 
