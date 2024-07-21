@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f41df24a-8273-4b03-8113-72d31b745b38)# NASSCOM-VSD-SOC-Design-Program
+# NASSCOM-VSD-SOC-Design-Program
 
 ## Table of Contents
 - [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
@@ -171,16 +171,13 @@ prep -design picorv32a
 
 After the preparation is complete, we can see a new directory with todays date is created within 'runs' folder in 'picorv32a' folder.
 
-![9](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/cb3cefd1-145a-4a08-b203-4fbf564ce584)
+![Screenshot (733)](https://github.com/user-attachments/assets/a1163602-9883-4dc0-a351-b5700c124a41)
 
 ### Review files after design prep and run synthesis
 Now, when we open the newly created directory:
-![10](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/b414945d-dc0d-47b2-8e64-5ffa6167f2c9)
+![Screenshot (734)](https://github.com/user-attachments/assets/2edcd507-a905-435f-a82e-b67901f5bbce)
 
 At first, every directory will be empty since no operations have been performed on the design. However, there will be a directory named "tmp" that contains various types of files. One of these files is "merged.lef" which includes information about metal layer levels and cell levels.
-
-![11](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/b0504629-bdac-4fe8-b056-068a8184404f)
-
 use the follwoing command to open "merged.lef":
 ```
 less merged.lef
@@ -191,15 +188,14 @@ less merged.lef
   ```
   less config.tcl
   ```
-  ![13](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/fac38ff5-c389-4cfa-8e9f-bf5de455b0f0)
-
-
+  
 Now, coming back to the step where design preperation was completed successfully.
 Now, To perform synthesis on the design use the following command :
 ```
 % run_synthesis
 ```
-![a](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/b67df7ad-3abc-46e7-9b84-c8f64b816aee)
+![Screenshot (735)](https://github.com/user-attachments/assets/255117ca-b01e-44c1-b994-a2bfbe04f459)
+
 It will take some time to get completed.
 
 * Extras: Watch these videos
@@ -212,9 +208,8 @@ It will take some time to get completed.
 Now, First objective after the synthesis is completed is to calculate the Flip Flop Ratio.
 
 Now, if we see the synthesized results we find:
-![15](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/1c9dba6c-7591-4c35-b2bc-0206190c2928)
-
-
+![Screenshot (736)](https://github.com/user-attachments/assets/b128b579-a3aa-4657-ba2a-df35a97d8a3e)
+![Screenshot (737)](https://github.com/user-attachments/assets/3e943a0e-6bb9-409e-82ac-33849826b85b)
 
 ```
 Number of D Flipflops : 1613
@@ -231,7 +226,7 @@ Also, Now if we go to:
 ```
 /work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-07_06-37/results/synthesis$
 ```
-![16](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/5ab1a9f4-ca35-49cb-a4e8-58526278d6d6)
+![Screenshot (738)](https://github.com/user-attachments/assets/07d02e35-78d8-4ffc-b73c-e28d159a973c)
 
 we have the synthesis results stored here now.
 
@@ -351,15 +346,15 @@ To ensure a smooth floorplanning process, designers must pay attention to certai
   ```
   run_floorplan
   ```
-![2](https://github.com/user-attachments/assets/bf52d41f-7c70-4971-b0b1-8b73303bab02)
+![image](https://github.com/user-attachments/assets/3be9d1c4-9b6b-4e36-a06f-7c0da99d763b)
 
 When the floorplaning is completed, To view the results go to the path as shown in image below  : 
 
-![4 def file](https://github.com/user-attachments/assets/229f9afe-3a12-4afa-b5f3-a38f97544d65)
+![image](https://github.com/user-attachments/assets/5e0deaff-3d8d-4778-b6d2-2ecc0b8fee5a)
 
 open the def file:
 
-![5 def file reuslts](https://github.com/user-attachments/assets/484078cb-b5d8-4f09-895c-159fd63d4e5f)
+![image](https://github.com/user-attachments/assets/aeca9fd4-bb1f-4278-954d-13f046f9b876)
 
 These results are useful for various analysis, for example: we can see the die area :
 
@@ -371,7 +366,8 @@ Now, to open this "def" file in magic , use the following command:
 
 ```
 
-![7 opening in magic](https://github.com/user-attachments/assets/14b20546-e434-4bad-93d1-6be3ea5fee71)
+![image](https://github.com/user-attachments/assets/4dde39bc-f9e1-4278-860c-1523e0f5c372)
+
 Now, we can use 'Magic' tool to expllore the floorplan.
 
 #### Design Alignment Instructions in MAGIC
@@ -382,7 +378,7 @@ Now, we can use 'Magic' tool to expllore the floorplan.
 | **Zooming In on a Specific Area** | 1. Left-click and drag to highlight the desired region.<br>2. Right-click to open the context menu.<br>3. Press `Z` to zoom in on the selected area. |
 | **Retrieving Cell Details**    | 1. Hover your cursor over the cell you want details for.<br>2. Press `S` to select the cell.<br>3. In the `tkcon` window, type the command `what` to display the cell's details. |
 
-![8 what command](https://github.com/user-attachments/assets/5941e834-c4c9-48ee-9db3-a514dc51cb38)
+![image](https://github.com/user-attachments/assets/33129dcd-b761-4e9d-9845-a7a3b6dd99cf)
 
 ### STEPS TO PERFORM PLACEMENT IN OPENLANE
 After successfully completing floorplanning, the design process moves on to the placement stage, which comprises two main phases:
@@ -395,19 +391,19 @@ To initiate the placement process, use the following command:
 ```
 run_placement
 ```
-![1 placement donw](https://github.com/user-attachments/assets/00b4b998-a96a-43ab-8018-a8ae6547f80f)
+![image](https://github.com/user-attachments/assets/08891124-a8e5-4149-9d11-25a493c09cda)
 
 After the Placement is done. To view the results Go to the following loacation:
 ```
-~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/12-07_11-26/results/placement$
+/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/results/placement
 ```
 And then we can see 'picorv32a.placement.def' file. To open it using MAGIC use the follwoing command:
 ```
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def
 ```
-![2 placement result magic](https://github.com/user-attachments/assets/c480ee72-2130-422a-8f1c-c4f403072830)
-![image](https://github.com/user-attachments/assets/6ffd41e9-d805-4da9-aa15-8f641046d05e)
+![image](https://github.com/user-attachments/assets/4c6fe222-33ca-4368-95ca-a04da25b2a6e)
 
+![image](https://github.com/user-attachments/assets/cb1d52a8-fb7f-4a6d-abe6-37a4bdc02efd)
 
 # DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
 
@@ -846,30 +842,36 @@ Now ```run_floorplan```
 As we can see from the above image, it is failed.
 So, run these:
 
+
+```h```````````````````````````````````````````````````````````````````````````````````````````````````````````h ```
+As we have completed the synthesis stage now we complete the floorplan using the following command:
 ```
 init_floorplan
 place_io
 tap_decap_or
 ```
-![image](https://github.com/user-attachments/assets/25879e69-e876-4db9-b3de-8f8a13f1efdf)
+![image](https://github.com/user-attachments/assets/061403dc-8294-4d9a-b237-3a2b13e786ff)
 
 Now, as floorplan stage is completed , we run placement
 ```
 run_placement
 ```
-![image](https://github.com/user-attachments/assets/f874d70c-a6e0-4b84-bb14-4e5819e5c6da)
+![image](https://github.com/user-attachments/assets/04af4d5f-aa8a-41f8-a2e7-8ccadb86fc33)
 
 Now, lets check whether the cell that we have created has been included in the design or not.
-Go to the follwoing directory in image:
-![image](https://github.com/user-attachments/assets/affd2bd5-3776-4fa8-a1d3-884fecb57777)
+Go to the follwoing directory :
+```
+/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/results/placement
+```
 use :
 ```
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
 ```
-![image](https://github.com/user-attachments/assets/a4ac2baa-5d8d-4a33-8f31-7395e45781e7)
+![image](https://github.com/user-attachments/assets/d27072a6-f7a9-4955-9129-320b2617cb37)
+
 we cans ee that the cell is successfully placed in the deisgn.
 now let us check its alignment is correct or not use command 'expand' in 'tckon' window.
-![image](https://github.com/user-attachments/assets/05e925f3-2a76-4505-a57c-8f144e896a4e)
+![image](https://github.com/user-attachments/assets/e5cef10f-e4d4-407f-846c-56a756aff777)
 
 
 # Timing analysis with ideal clocks using openSTA
@@ -937,9 +939,8 @@ Now use the command:
 sta pre_sta.conf
 ```
 
-![image](https://github.com/user-attachments/assets/da3b3966-58af-4dca-9775-f582ba5751ab)
-Hence, slack is met.
-
+![image](https://github.com/user-attachments/assets/28a4d931-3fd1-4c07-b877-93bd64aa1f2b)
+As we can see that Slack is equal to of that we got in synthesis stage. So STA is succesful.
 
 ## Steps to run CTS using TritonCTS
 
@@ -948,30 +949,35 @@ To update the previous design with the improved version, use the command:
 ```
 write_verilog //path of the previous design//
 #In our case:
-write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis.v
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/results/synthesis/picorv32a.synthesis.v
 ```
 ![image](https://github.com/user-attachments/assets/5e371a72-da7d-478b-aecb-9fa09d20abd9)
 
 
-This will replace the old design with the optimized one. Once the update is complete, proceed with the Floorplan stage using the same commands as before. Upon successful completion of the Floorplan, proceed to the placement step by running the command:
+This will replace the old design with the optimized one. Once the update is complete, proceed with the Floorplan stage using the same commands as before.
+```
+init_floorplan
+place_io
+tap_decap_or
+```
+Upon successful completion of the Floorplan, proceed to the placement step by running the command:
 
 ```
 run_placement
 ```
 as we can see from the below images file has been overwritten
-![image](https://github.com/user-attachments/assets/38536f10-9291-43fb-a2f6-82cde40cc2fa)
+![image](https://github.com/user-attachments/assets/82baef26-bec0-4c9e-883d-4e1c68daca02)
 
-![image](https://github.com/user-attachments/assets/4002e1fd-3ec4-4d68-a456-b9ddb4ef504c)
+![image](https://github.com/user-attachments/assets/78046951-c53b-41f5-abe0-8f4377a0ec98)
 Now after the placement has  been completed, we go for CTS:
 ```
 run_cts
 ```
-![image](https://github.com/user-attachments/assets/ec0773d9-8a44-4297-8115-b113b444a96b)
+![image](https://github.com/user-attachments/assets/1d44dafc-0475-471d-89d8-74c2369b85a9)
 
 In cts stage buffers get added , modifying the netlist. After completion of the cts we can observe that in the synthesis results directory a new .cts file is added. The newly added CTS file contains both the previous netlist and also the clock buffers that were added during the cts stage.
 
-![image](https://github.com/user-attachments/assets/1dbb93cf-f5bc-4e89-9d3f-2fa7f8ff4187)
-
+![image](https://github.com/user-attachments/assets/a0f8d5fc-1839-4c91-8d20-b3c57f6ceb94)
 
 ## Timing analysis with real clocks using openSTA
 use the below given command to enter into openRoad:
@@ -981,30 +987,30 @@ openroad
 In openroad, We will first create the database (creted from lef and def files) and in the timing analysis this db is used.
 Run the follwoing commands:
 ```
-read_lef /openLANE_flow/designs/picorv32a/runs/12-07_11-26/tmp/merged.lef
+read_lef /openLANE_flow/designs/picorv32a/runs/20-07_16-44/tmp/merged.lef
 ```
-![image](https://github.com/user-attachments/assets/b493d9eb-f1da-4148-9804-b97aaf8350c2)
+![image](https://github.com/user-attachments/assets/f85780c0-983e-4e48-ae1a-f58dbad24d4c)
 
+```
+read_def /openLANE_flow/designs/picorv32a/runs/20-07_16-44/results/cts/picorv32a.cts.def
+```
+![image](https://github.com/user-attachments/assets/79a0fcc2-fe4b-45ee-bcbc-ef3eec3ab225)
 
-```
-read_def /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/cts/picorv32a.cts.def
-```
-![image](https://github.com/user-attachments/assets/6f180bab-9023-4737-ae3a-562f224b5ed9)
 ```
 write_db pico_cts.db
 ```
-![image](https://github.com/user-attachments/assets/fb38de22-564e-4d85-ae95-2ec79d92220d)
+![image](https://github.com/user-attachments/assets/0fff2ce8-fefd-4d84-a5cd-3da7ff1ccce1)
+
 ```
 read_db pico_cts.db
-read_verilog /openLANE_flow/designs/picorv32a/runs/12-07_11-26/results/synthesis/picorv32a.synthesis_cts.v
+read_verilog /openLANE_flow/designs/picorv32a/runs/20-07_16-44/results/synthesis/picorv32a.synthesis_cts.v
 read_liberty $::env(LIB_SYNTH_COMPLETE)
 read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
 set_propagated_clock [all_clocks]
 report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
 ```
-![image](https://github.com/user-attachments/assets/58b484f8-f318-4565-9b70-e33cd0d0b3c4)
-
+![image](https://github.com/user-attachments/assets/2f16e2db-a617-42a3-9b32-3759a1b8147b)
 
 ## Steps to execute OpenSTA with right timing libraries and CTS assignment
 First use ```exit`` to exit from openroad, now you will come to openlane:
@@ -1094,6 +1100,14 @@ set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_
 ![image](https://github.com/user-attachments/assets/f30b8304-952c-4aa1-9643-82d66f76eea5)
 
 # DAY 5: Final steps for RTL2GDS using tritonRoute and openSTA
+* **Note:**  How to know which stage was done previously in the flow?
+* We can see it by seeing the def, current def got updated to cts in the previous stage when cts was completed.
+  use the folllwoing command to check it:
+  ```
+  echo $::env(CURRENT_DEF)
+  ```
+  ![image](https://github.com/user-attachments/assets/66f1dcd0-0f34-4102-b75e-76f363537d58)
+
 ## Introduction to Routing Algorithm
 * Maze Routing
   ![image](https://github.com/user-attachments/assets/cea1a2e7-9d15-4b59-89c1-c280f8829384)
@@ -1112,11 +1126,15 @@ set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_
   
 ## Steps to build power distribution network
 As the CST stage is compelted, now we need to lay down the Power Distribution Network.
+
 Use the folloeing command ```gen_pdn```.
-![image](https://github.com/user-attachments/assets/7b9acd59-e548-4c74-8051-30f73a831278)
-![image](https://github.com/user-attachments/assets/cc1652d1-adfe-4b47-9e4b-1be2a3578805)
+
+![image](https://github.com/user-attachments/assets/cf7290b2-fde5-4928-a2af-2846f2b15482)
+
 Now, from the above image we can see PDN is successfully generated.
-![image](https://github.com/user-attachments/assets/2b882aa8-1973-4193-a2d4-a8d7ae621e47)
+
+![image](https://github.com/user-attachments/assets/35d5c295-1885-435d-8559-478c2c02e295)
+
 Now, can see that the pitch of the standard cell rails is 2.720, which we have expected.
 
 ## Steps from power straps to std cell power
@@ -1127,13 +1145,18 @@ Surrounding the design are I/O pads, with the red and blue blocks representing p
 These pads connect to power and ground rings that encircle the design, supplying power to straps.
 The vertical lines seen for the rings are known as power straps.
 Connections from the power straps and rings extend to the power rails, with standard cells positioned between these rails. The height of the standard cells must be multiples of the rail pitch to ensure proper power and ground supply.
-![image](https://github.com/user-attachments/assets/62641ee0-53ab-43d2-ba31-c8f0a3150161)
+
+![image](https://github.com/user-attachments/assets/bb732958-682a-407b-8f90-35083ee6082b)
 Now, we can see def has been modifoed from cts to pdn.
+
+
 ## Basics of global and detail routing and configure TritonRoute
+
 Now the last stage in the design is Routing , us ethe following command: 
 ```
 run_routing
 ```
+
 ### Routing using TritonRoute
 ![image](https://github.com/user-attachments/assets/bdf1ee06-3092-4f06-970d-632618d4438c)
 
