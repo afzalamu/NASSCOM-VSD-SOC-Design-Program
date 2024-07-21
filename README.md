@@ -1168,6 +1168,12 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/user-attachments/assets/8e8c2595-dcef-44b8-af49-82e2f7e2403b)
 
 
+* To view the Parsitic Extraction file, Go to the follwoing directory:
+  ![image](https://github.com/user-attachments/assets/2e71d15f-dd34-4284-ad00-fb56b1d803e4)
+Also verilog files were modified after certain stages, see here:
+![image](https://github.com/user-attachments/assets/5180e7c4-d187-4a1b-adf4-1af74519ba8f)
+
+
 # References
 
 This project has utilized resources and materials from the following sources:
