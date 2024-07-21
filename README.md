@@ -1164,9 +1164,8 @@ To view the final layout, us ethe following command:
 ```
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/results/routing/picorv32a.def &
 ```
-![image](https://github.com/user-attachments/assets/8e8c2595-dcef-44b8-af49-82e2f7e2403b)
-
 ![image](https://github.com/user-attachments/assets/dde2a138-fb6a-4810-8c56-ba549a3f8220)
+![image](https://github.com/user-attachments/assets/8e8c2595-dcef-44b8-af49-82e2f7e2403b)
 
 
 # References
