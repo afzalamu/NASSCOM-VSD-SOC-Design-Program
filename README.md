@@ -1156,9 +1156,16 @@ Now the last stage in the design is Routing , us ethe following command:
 ```
 run_routing
 ```
+![image](https://github.com/user-attachments/assets/782ed883-bbc0-4456-81a4-af65c550b260)
+![image](https://github.com/user-attachments/assets/8fd78cb2-78cc-4dc5-80bd-532b9fd987e3)
+The routing has been completed with zero violations, but there is a negative slack, we need to eleiminate the engaticve slack for successful completion of the Physical Design Flow.
 
-### Routing using TritonRoute
-![image](https://github.com/user-attachments/assets/bdf1ee06-3092-4f06-970d-632618d4438c)
+To view the final layout, us ethe following command:
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/results/routing/picorv32a.def &
+```
+
+
 
 # References
 
