@@ -1,11 +1,5 @@
 # NASSCOM-VSD-SOC-Design-Program
 
-<a href="https://afzalamu.github.io/" target="_blank">
-  <button style="padding: 10px 20px; font-size: 16px; color: white; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer;">
-    Author: Afzal Malik
-  </button>
-</a>
-
 ## Table of Contents
 
 - [THEORY 1: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK](#theory-1-open-source-eda-openlane--sky130-pdk)
@@ -1189,3 +1183,10 @@ This project has utilized resources and materials from the following sources:
 - [VSD Standard Cell Design](https://github.com/nickson-jose/vsdstdcelldesign)
 - [Google Skywater PDK](https://github.com/google/skywater-pdk)
 - Materials provided in the NASSCOM VSD SoC Design Program
+
+# AUTHOR
+<a href="https://afzalamu.github.io/" target="_blank">
+  <button style="padding: 10px 20px; font-size: 16px; color: white; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer;">
+    Afzal Malik
+  </button>
+</a>
