@@ -3,28 +3,79 @@
 ## Table of Contents
 
 - [THEORY 1: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK](#theory-1-open-source-eda-openlane--sky130-pdk)
+   - [What is an RTL to GDSII flow?](#what-is-an-rtl-to-gdsii-flow)
+   - [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](#insight-into-the-qfn-48-chip-pads-core-die-and-ip-components)
+   - [SOC DESIGN USING OPENLANE](#soc-design-using-openlane)
 - [LAB 1: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS](#lab-1-getting-familiar-with-open-source-eda-tools)
+   - [Understanding OPENLANE Directory Structure](#understanding-openlane-directory-structure)
+   - [Design Preparation Step](#design-preparation-step)
+   - [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
+   - [Characterization of Synthesized Results](#characterization-of-synthesized-results)
    
 - [THEORY 2: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#theory-2-good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
+   - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
+   - [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
+   - [CELL DESIGN AND CHARACTERISATION FLOWS](#cell-design-and-characterisation-flows)
+   - [GENERAL TIMING CHARACTERISATION PARAMETERS](#general-timing-characterisation-parameters)
 - [LAB 2: FLOORPLANNING & PLACEMENT](#lab-2-floorplanning--placement)
+  - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
+  - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
 
 - [THEORY 3: DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION](#theory-3-design-library-cell-using-magic-layout-and-ngspice-characterization)
+- [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
+- [INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS](#inception-of-layout--cmos-fabrication-process)
+    - [CREATE ACTIVE REGIONS](#create-active-regions)
+    - [FORMATION OF WELLS](#formation-of-wells)
+    - [FORMATION OF GATE TERMINALS](#formation-of-gate-terminals)
+    - [LIGHTLY DOPED DRAIN (LDD) FORMATION](#lightly-doped-drain-ldd-formation)
+    - [SOURCE DRAIN FORMATION](#source-drain-formation)
+    - [LOCAL INTERCONNECT FORMATION](#local-interconnect-formation)
+    - [HIGHER LEVEL METAL FORMATION](#higher-level-metal-formation) 
 - [LAB 3: INTRODUCTION TO MAGIC AND SKY130A](#lab-3-introduction-to-magic-and-sky130a)
+   - [HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?](#how-to-make-changes-while-being-in-then-flow)
+   - [HOW TO GIT CLONE THE "vsdstdcelldesign"](#how-to-git-clone-the-vsdstdcelldesign)
+   - [INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER](#introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
+   - [TO CREATE STANDARD CELL LAYOUT IN MAGIC](#to-create-standard-cell-layout-in-magic)
+   - [TO EXTRACT THE NETLIST IN MAGIC](#to-extract-the-netlist-in-magic)
+   - [SKY130 TECH FILE LABS](#sky130-tech-file-labs)
+      - [CREATE SPICEDECK USING SKY130 TECH](#create-spicedeck-using-sky130-tech)
+      - [CHARACTERIZE INVERTER USING SKY130 TECH FILES](#characterize-inverter-using-sky130-tech-files)
+   - [Introduction to Magic Tools and DRC Rules](#introduction-to-magic-tools-and-drc-rules)
+   - [Introduction to SKY130 PDK](#introduction-to-sky130-pdk)
+   - [Introduction to Magic & Steps to Load SKY130 Tech Rules](#introduction-to-magic--steps-to-load-sky130-tech-rules)
+   - [Lab Exercise to Fix Poly-9 Error in SKY130 Tech File](#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
+   - [Lab Challenge Exercise to Describe DRC Error as Geometrical Construct](#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
+   - [Lab Challenge to Find Missing or Incorrect Rules and Fix Them](#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
  
 - [THEORY 4: DELAY TABLES, CTS, TIMING ANALYSIS](#theory-4-delay-tables-cts-timing-analysis)
+   - [Introduction to delay tables](#introduction-to-delay-tables)
+   - [Introduction to CTS](#introduction-to-cts)
+   - [TIMING ANALYSIS](#timing-analysis)
 - [LAB 4: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE](#lab-4-pre-layout-timing-analysis--importance-of-good-clock-tree)
+   - [Timing Modelling Using Delay Tables](#timing-modelling-using-delay-tables)
+      - [Converting the Grid Info to Track Info](#converting-the-grid-info-to-track-info)
+      - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
+      - [Introduction to Timing Libs and Steps to Include New Cell in Synthesis](#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
+      - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
+   - [Timing analysis with ideal clocks using openSTA](#timing-analysis-with-ideal-clocks-using-opensta)
+      - [Configure OpenSTA for post-synth timing analysis](#configure-opensta-for-post-synth-timing-analysis)
+      - [Steps to run CTS using TritonCTS](#steps-to-run-cts-using-tritoncts)
+   - [Timing analysis with real clocks using openSTA](#timing-analysis-with-real-clocks-using-opensta)
+      - [Steps to execute OpenSTA with right timing libraries and CTS assignment](#steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
+      - [Now if we want to include buf_1 again?](#now-if-we-want-to-include-buf_1-again)
   
 - [THEORY + LAB 5: FINAL STEPS FOR RTL2GDS USING TRITONROUTE & OPENSTA](#theory--lab-5-final-steps-for-rtl2gds-using-tritonroute--opensta)
-
-- [References](#references)
+   - [Introduction to Routing Algorithm](#introduction-to-routing-algorithm)
+   - [Steps to build power distribution network](#steps-to-build-power-distribution-network)
+   - [Steps from power straps to std cell power](#steps-from-power-straps-to-std-cell-power)
+   - [Basics of global and detail routing and configure TritonRoute](#basics-of-global-and-detail-routing-and-configure-tritonroute)
+   - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
+   - 
+- [REFERENCES](#references)
 
 
 
 # THEORY 1: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK
-
-- [What is an RTL to GDSII flow?](#what-is-an-rtl-to-gdsii-flow)
-- [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](#insight-into-the-qfn-48-chip-pads-core-die-and-ip-components)
-- [SOC DESIGN USING OPENLANE](#soc-design-using-openlane)
 
 ## What is an RTL to GDSII flow?
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/8781543a-f108-4821-a3e9-45f1d8d5dd93)
@@ -51,11 +102,6 @@ Here is the OpenLANE Detailed ASIC Design Flow:
 
 
 # LAB 1: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS 
-
-- [Understanding OPENLANE Directory Structure](#understanding-openlane-directory-structure)
-- [Design Preparation Step](#design-preparation-step)
-- [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
-- [Characterization of Synthesized Results](#characterization-of-synthesized-results)
 
 ## Understanding OPENLANE Directory Structure 
 
@@ -189,11 +235,6 @@ we have the synthesis results stored here now.
 
 # THEORY 2: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS
 
-- [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
-- [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
-- [CELL DESIGN AND CHARACTERISATION FLOWS](#cell-design-and-characterisation-flows)
-- [GENERAL TIMING CHARACTERISATION PARAMETERS](#general-timing-characterisation-parameters)
-
 ## CHIP FLOORPLANNING CONSIDERATIONS
 
 ### UTILIZATION FACTOR AND ASPECT RATIO
@@ -296,9 +337,6 @@ So choosing a threshold point carefully is very important.
 
 # LAB 2: FLOORPLANNING & PLACEMENT
 
-  - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
-  - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
-
 ## STEPS TO RUN FLOORPLAN USING OPENLANE
 
 To ensure a smooth floorplanning process, designers must pay attention to certain parameters, known as switches, which can significantly impact the floorplan when adjusted. For instance, the utilization factor and aspect ratio are among these critical switches. Designers need to verify that these parameters align with the project requirements before initiating the floorplanning stage. The image below illustrates various types of switches involved in the floorplanning phase.
@@ -369,17 +407,6 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 # THEORY 3: DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
 
-
-- [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
-- [INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS](#inception-of-layout--cmos-fabrication-process)
-    - [CREATE ACTIVE REGIONS](#create-active-regions)
-    - [FORMATION OF WELLS](#formation-of-wells)
-    - [FORMATION OF GATE TERMINALS](#formation-of-gate-terminals)
-    - [LIGHTLY DOPED DRAIN (LDD) FORMATION](#lightly-doped-drain-ldd-formation)
-    - [SOURCE DRAIN FORMATION](#source-drain-formation)
-    - [LOCAL INTERCONNECT FORMATION](#local-interconnect-formation)
-    - [HIGHER LEVEL METAL FORMATION](#higher-level-metal-formation) 
-
 ## SPICE DECK CREATION FOR CMOS INVERTER
 Spice deck basically Netlist having the connectivity information, Input to be provided, Output Tap points and much more.
 Proceeding with an example:
@@ -442,21 +469,6 @@ CMOS circuit is a very Robust device, seee the below image:
 
 
 # LAB 3: INTRODUCTION TO MAGIC AND SKY130A 
-- [HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?](#how-to-make-changes-while-being-in-then-flow)
-- [HOW TO GIT CLONE THE "vsdstdcelldesign"](#how-to-git-clone-the-vsdstdcelldesign)
-- [INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER](#introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
-- [TO CREATE STANDARD CELL LAYOUT IN MAGIC](#to-create-standard-cell-layout-in-magic)
-- [TO EXTRACT THE NETLIST IN MAGIC](#to-extract-the-netlist-in-magic)
-- [SKY130 TECH FILE LABS](#sky130-tech-file-labs)
-   - [CREATE SPICEDECK USING SKY130 TECH](#create-spicedeck-using-sky130-tech)
-   - [CHARACTERIZE INVERTER USING SKY130 TECH FILES](#characterize-inverter-using-sky130-tech-files)
-- [Introduction to Magic Tools and DRC Rules](#introduction-to-magic-tools-and-drc-rules)
-- [Introduction to SKY130 PDK](#introduction-to-sky130-pdk)
-- [Introduction to Magic & Steps to Load SKY130 Tech Rules](#introduction-to-magic--steps-to-load-sky130-tech-rules)
-- [Lab Exercise to Fix Poly-9 Error in SKY130 Tech File](#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
-- [Lab Challenge Exercise to Describe DRC Error as Geometrical Construct](#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
-- [Lab Challenge to Find Missing or Incorrect Rules and Fix Them](#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
-
 
 ## HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?
 
@@ -660,10 +672,6 @@ Now, we can see as we apply the contact the errors are removed.
 
 # THEORY 4: DELAY TABLES, CTS, TIMING ANALYSIS
 
-- [Introduction to delay tables](#introduction-to-delay-tables)
-- [Introduction to CTS](#introduction-to-cts)
-- [TIMING ANALYSIS](#timing-analysis)
-
 ## Introduction to delay tables
 ![image](https://github.com/user-attachments/assets/0b14100e-35e3-43fd-bde8-63f42c77cd70)
 ![image](https://github.com/user-attachments/assets/a96e61d8-e7bf-4944-839f-53991fd756e7)
@@ -685,18 +693,6 @@ At every level , each node  is driving the same load, hence there is no skew, if
 
 
 # LAB 4: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
-
-- [Timing Modelling Using Delay Tables](#timing-modelling-using-delay-tables)
-   - [Converting the Grid Info to Track Info](#converting-the-grid-info-to-track-info)
-   - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
-   - [Introduction to Timing Libs and Steps to Include New Cell in Synthesis](#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
-   - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
-- [Timing analysis with ideal clocks using openSTA](#timing-analysis-with-ideal-clocks-using-opensta)
-   - [Configure OpenSTA for post-synth timing analysis](#configure-opensta-for-post-synth-timing-analysis)
-   - [Steps to run CTS using TritonCTS](#steps-to-run-cts-using-tritoncts)
-- [Timing analysis with real clocks using openSTA](#timing-analysis-with-real-clocks-using-opensta)
-   - [Steps to execute OpenSTA with right timing libraries and CTS assignment](#steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
-   - [Now if we want to include buf_1 again?](#now-if-we-want-to-include-buf_1-again)
 
 ## TIMING MODELLING USING DELAY TABLES
 
@@ -1180,7 +1176,7 @@ Also verilog files were modified after certain stages, see here:
 ![image](https://github.com/user-attachments/assets/391eb45b-aea2-44e6-acbd-9ee52f358d17)
 
 
-# References
+# REFERENCES
 
 This project has utilized resources and materials from the following sources:
 
