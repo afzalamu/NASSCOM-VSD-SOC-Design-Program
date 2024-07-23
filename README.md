@@ -1,8 +1,10 @@
 # NASSCOM-VSD-SOC-Design-Program
 
 ## Table of Contents
-- [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
-- [DAY1 LABS: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS](#day1-labs--getting-familiar-with-open-source-eda-tools)
+
+- [THEORY 1: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK](#theory-1-open-source-eda-openlane--sky130-pdk)
+- [LAB 1: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS](#lab-1-getting-familiar-with-open-source-eda-tools)
+
 
     
 - [DAY2 THEORY: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#day2-theory-good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
@@ -98,6 +100,7 @@ Here is the OpenLANE Detailed ASIC Design Flow:
 
 
 # LAB 1: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS 
+
 - [Understanding OPENLANE Directory Structure](#understanding-openlane-directory-structure)
 - [Design Preparation Step](#design-preparation-step)
 - [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
