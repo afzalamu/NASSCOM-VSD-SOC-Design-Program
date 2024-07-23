@@ -70,7 +70,7 @@
    - [Steps from power straps to std cell power](#steps-from-power-straps-to-std-cell-power)
    - [Basics of global and detail routing and configure TritonRoute](#basics-of-global-and-detail-routing-and-configure-tritonroute)
    - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
-   - 
+     
 - [REFERENCES](#references)
 
 
