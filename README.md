@@ -2,9 +2,7 @@
 
 ## Table of Contents
 - [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
-  - [What is an RTL to GDSII flow?](#what-is-an-rtl-to-gdsii-flow)
-  - [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](#insight-into-the-qfn-48-chip-pads-core-die-and-ip-components)
-  - [SOC DESIGN USING OPENLANE](#soc-design-using-openlane)
+
 - [DAY1 LABS: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS](#day1-labs--getting-familiar-with-open-source-eda-tools)
   - [Understanding OPENLANE Directory Structure](#understanding-openlane-directory-structure)
   - [Design Preparation Step](#design-preparation-step)
@@ -73,13 +71,17 @@
 
 
 
-## DAY1 THEORY : Open-source EDA, OpenLANE and Sky130 PDK
+# 1 THEORY: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK
 
-### What is an RTL to GDSII flow?
+- [What is an RTL to GDSII flow?](#what-is-an-rtl-to-gdsii-flow)
+- [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](#insight-into-the-qfn-48-chip-pads-core-die-and-ip-components)
+- [SOC DESIGN USING OPENLANE](#soc-design-using-openlane)
+
+## What is an RTL to GDSII flow?
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/8781543a-f108-4821-a3e9-45f1d8d5dd93)
 The RTL (Register Transfer Level) to GDSII (Graphic Data System II) flow is a comprehensive process in integrated circuit (IC) design that transforms a high-level hardware description into a physical layout ready for fabrication. It begins with RTL design, where the circuit's functionality is coded in hardware description languages like Verilog or VHDL. This RTL code is then synthesized into a gate-level netlist. Design for Test (DFT) features are incorporated to facilitate testing. The netlist undergoes floorplanning, placement, and routing to map the circuit onto the chip layout. Clock Tree Synthesis (CTS) ensures efficient clock distribution. After detailed placement and routing, signoff checks including Design Rule Checking (DRC), Layout Versus Schematic (LVS) checks, and Static Timing Analysis (STA) are performed. Finally, the design is exported as a GDSII file, which is used by semiconductor foundries to fabricate the physical ICs
 
-### Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components
+## Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components
 The image below is an Arduino Microcontroller Board. Our focus is on the encircled area, which contains the 'Microprocessor.
 We will be designing this microprocessor from the abstract level to the fabrication level using the RTL to GDS flow. 
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/d4f23775-c0c2-4f05-a198-9235b756aafe)
@@ -94,7 +96,7 @@ We will be designing this microprocessor from the abstract level to the fabricat
 | **Die** | The die is the part of the chip that includes both the core and IO pads. It is the area that is implemented on silicon wafer|
 | **IPs** | Foundry IPs require manual design or human intervention to create, such as components  ADC, DAC, PLLs and may more.|
 
-### SOC DESIGN USING OPENLANE
+## SOC DESIGN USING OPENLANE
 Here is the OpenLANE Detailed ASIC Design Flow:
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/8e45d006-cccb-429e-a3c1-35e275cf86e9)
 
