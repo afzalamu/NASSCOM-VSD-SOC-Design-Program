@@ -4,23 +4,10 @@
 
 - [THEORY 1: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK](#theory-1-open-source-eda-openlane--sky130-pdk)
 - [LAB 1: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS](#lab-1-getting-familiar-with-open-source-eda-tools)
+   
+- [THEORY 2: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#theory-2-good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
+- [LAB 2: FLOORPLANNING & PLACEMENT](#lab-2-floorplanning--placement)
 
-
-    
-- [DAY2 THEORY: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#day2-theory-good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
-  - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
-    - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
-    - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
-    - [CONCEPT OF DECOUPLING CAPACITOR](#concept-of-decoupling-capacitor)
-    - [CONCEPT OF POWER PLANNING](#concept-of-power-planning)
-  - [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
-    - [Netlist binding and initial place design](#netlist-binding-and-initial-place-design)
-    - [Optimize placement using estimated wire-length and capacitance](#optimize-placement-using-estimated-wire-length-and-capacitance)
-  - [CELL DESIGN AND CHARACTERISATION FLOWS](#cell-design-and-characterisation-flows)
-  - [GENERAL TIMING CHARACTERISATION PARAMETERS](#general-timing-characterisation-parameters)
-- [DAY2 LABS: FLOORPLANNING & PLACEMENT](#day2-labs-floorplanning--placement)
-  - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
-  - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
     
 - [DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION](#day3-theory--design-library-cell-using-magic-layout-and-ngspice-characterization)
   - [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
@@ -236,11 +223,22 @@ Also, Now if we go to:
 we have the synthesis results stored here now.
 
 
-## DAY2 THEORY: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS
+# THEORY 2: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS
 
-### CHIP FLOORPLANNING CONSIDERATIONS
+- [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
+    - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
+    - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
+    - [CONCEPT OF DECOUPLING CAPACITOR](#concept-of-decoupling-capacitor)
+    - [CONCEPT OF POWER PLANNING](#concept-of-power-planning)
+- [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
+    - [Netlist binding and initial place design](#netlist-binding-and-initial-place-design)
+    - [Optimize placement using estimated wire-length and capacitance](#optimize-placement-using-estimated-wire-length-and-capacitance)
+- [CELL DESIGN AND CHARACTERISATION FLOWS](#cell-design-and-characterisation-flows)
+- [GENERAL TIMING CHARACTERISATION PARAMETERS](#general-timing-characterisation-parameters)
 
-#### UTILIZATION FACTOR AND ASPECT RATIO
+## CHIP FLOORPLANNING CONSIDERATIONS
+
+### UTILIZATION FACTOR AND ASPECT RATIO
   
   In order to calculate the utilization factor & aspect ratio, first we need to calculate the height and width of the core and die.
   ![image](https://github.com/user-attachments/assets/638b2fc2-54c8-43f4-afad-183281247e6b)
@@ -275,18 +273,18 @@ Utilisation Factor = (4 sq units)/(8 sq units) = 0.5
 Aspect Ratio = (2 units)/(4 units) = 0.5 i.e core has Rectangular Shape
 ```
 
-#### CONCEPT OF PREPLACED CELLS
+### CONCEPT OF PREPLACED CELLS
 ![image](https://github.com/user-attachments/assets/ac8dc27f-1213-4814-bfb5-76ebae9fbd3c)
 
 The concept of preplaced cells begins with organizing a complex combinational logic circuit, which may contain thousands of gates, into predefined locations within the layout. This involves identifying and positioning critical components or blocks, such as memory modules, clock gating cells, comparators, and multiplexers. These preplaced cells are treated as distinct entities or "black boxes" to streamline integration and management. The arrangement of these preplaced cells and other IPs within the design layout is known as floorplanning. 
 These IP`s / blocks have user defined locations and hence are  placed in chip before automated placement- and-routing and are called pre-placed cells.
 Automated Plcement and routing tools places the remaining logical cells in the design onto the chip.
 
-#### CONCEPT OF DECOUPLING CAPACITOR
+### CONCEPT OF DECOUPLING CAPACITOR
 ![image](https://github.com/user-attachments/assets/8bfb1295-5fa8-4b59-a3e9-2ce191ffea69)
 In circuits, certain high-power components may not receive adequate power from the source due to voltage drops in the connecting wires, causing their operation to fall outside their required voltage range for reliable switching. To address this issue, decoupling capacitors (De-cap cells) are strategically placed near these power-intensive components. These capacitors are connected to the power source and charge to a high level when no switching occurs. When switching activities commence, the decoupling capacitors quickly discharge to supply the necessary power directly to these components. Once switching ceases, the capacitors recharge, ensuring consistent and reliable power delivery to critical circuit components. This mechanism is essential in circuit design to maintain stable operation and prevent performance issues caused by fluctuating power supply conditions.
 
-#### CONCEPT OF POWER PLANNING
+### CONCEPT OF POWER PLANNING
 In the previous section, we discussed using decoupling capacitors (De-cap cells) to manage power distribution for various blocks. However, De-cap cells come with limitations, such as leakage power and increased chip area. To mitigate these issues, we use a technique called power planning. In areas of the chip with significant switching activity, two phenomena can occur: voltage drop and ground bounce.
 ![image](https://github.com/user-attachments/assets/77cef52e-a458-4a2f-bb3d-6e53b75bf932)
 **Voltage Drop**
@@ -299,20 +297,20 @@ Ground bounce occurs when a group of cells switch from 1 to 0 simultaneously, du
 ![image](https://github.com/user-attachments/assets/b4859dea-2da9-4f12-b459-389bbdae8fa1)
 To prevent these issues, a technique called power planning is used. This involves creating two separate power meshes: one for Vdd (positive voltage) and another for ground. These meshes are typically implemented using the top two metal layers to minimize voltage drops. They are spread across the design and connected to multiple Vdd and ground sources. With this approach, when a cell requires power to switch from 0 to 1, it draws from the nearest Vdd layer. Conversely, when a cell needs to drain power, it discharges to the nearest ground layer. This ensures stable and efficient power distribution throughout the chip.
 
-### LIBRARY BINDING AND PLACEMENTS
+## LIBRARY BINDING AND PLACEMENTS
 
 #### Netlist binding and initial place design
 In a netlist, each component has a distinct shape— for example, an AND gate has one shape while an OR gate has another. However, in a library, all components are represented by a uniform square or rectangular shape. A library contains a variety of elements that are ready to use, each with specified properties such as area and delay. Additionally, there are different versions of the same component, each with varying properties.
 ![image](https://github.com/user-attachments/assets/fb46bf68-612c-4df5-9014-1b74aca1375e)
 In the image above, we have three different sets of the same elements. The larger elements are faster but take up more space, while the smaller elements occupy less area but operate more slowly compared to the larger ones.
 
-#### Optimize placement using estimated wire-length and capacitance
+### Optimize placement using estimated wire-length and capacitance
 In the placement stage, it is crucial to take into account the estimated wire length when positioning cells. Wire length estimation involves calculating the distances from the input sources of cells to the output sinks they drive.
 
 In the example above, the tool positions the blocks based on these estimated wire lengths, as illustrated in the figure below.
 ![image](https://github.com/user-attachments/assets/997a2b24-fdf1-4284-bb8d-d709ef55bc4d)
 
-### CELL DESIGN AND CHARACTERISATION FLOWS
+## CELL DESIGN AND CHARACTERISATION FLOWS
 
 ![image](https://github.com/user-attachments/assets/3b5e890e-49ba-4d19-9dd4-0062b387a8dc)
 ![image](https://github.com/user-attachments/assets/630a5549-1c14-4bae-9ab3-cdb37c0fefc2)
@@ -323,7 +321,7 @@ In the example above, the tool positions the blocks based on these estimated wir
 - A typical Cell Design Flow Involves the follwoing steps as shown below:
 ![image](https://github.com/user-attachments/assets/bdbaf1c3-b853-4c3b-886f-80e98d7e5a15)
 
-### GENERAL TIMING CHARACTERISATION PARAMETERS
+## GENERAL TIMING CHARACTERISATION PARAMETERS
 ![image](https://github.com/user-attachments/assets/c46b462b-8dd0-4c54-8816-449a96f27909)
 * Propogation Dealy:
  ![image](https://github.com/user-attachments/assets/8f5398c5-5f93-4e10-b2a1-dd6380cef7d8)
@@ -338,11 +336,12 @@ So choosing a threshold point carefully is very important.
 ![image](https://github.com/user-attachments/assets/c2a1337b-9628-4d4a-befc-5045f957c884)
 
 
+# LAB 2: FLOORPLANNING & PLACEMENT
 
+  - [STEPS TO RUN FLOORPLAN USING OPENLANE](#steps-to-run-floorplan-using-openlane)
+  - [STEPS TO PERFORM PLACEMENT IN OPENLANE](#steps-to-perform-placement-in-openlane)
 
-## DAY2 LABS: FLOORPLANNING & PLACEMENT
-
-### STEPS TO RUN FLOORPLAN USING OPENLANE
+## STEPS TO RUN FLOORPLAN USING OPENLANE
 
 To ensure a smooth floorplanning process, designers must pay attention to certain parameters, known as switches, which can significantly impact the floorplan when adjusted. For instance, the utilization factor and aspect ratio are among these critical switches. Designers need to verify that these parameters align with the project requirements before initiating the floorplanning stage. The image below illustrates various types of switches involved in the floorplanning phase.
 ![1](https://github.com/user-attachments/assets/91630f9e-fa8b-4e4a-afc2-0c3d66c39ffa)
