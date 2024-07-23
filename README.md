@@ -369,6 +369,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 # THEORY 3: DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
 
+
 - [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
 - [INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS](#inception-of-layout--cmos-fabrication-process)
     - [CREATE ACTIVE REGIONS](#create-active-regions)
@@ -657,7 +658,7 @@ drc style drc(full)
 ![image](https://github.com/user-attachments/assets/4bfb7e93-8fa6-4969-915d-956d09f2b472)
 Now, we can see as we apply the contact the errors are removed.
 
-# THEORY 4 : DELAY TABLES, CTS, TIMING ANALYSIS
+# THEORY 4: DELAY TABLES, CTS, TIMING ANALYSIS
 
 - [Introduction to delay tables](#introduction-to-delay-tables)
 - [Introduction to CTS](#introduction-to-cts)
