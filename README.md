@@ -2,12 +2,8 @@
 
 ## Table of Contents
 - [DAY1 THEORY: Open-source EDA, OpenLANE and Sky130 PDK](#day1-theory--open-source-eda-openlane-and-sky130-pdk)
-
 - [DAY1 LABS: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS](#day1-labs--getting-familiar-with-open-source-eda-tools)
-  - [Understanding OPENLANE Directory Structure](#understanding-openlane-directory-structure)
-  - [Design Preparation Step](#design-preparation-step)
-  - [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
-  - [Characterization of Synthesized Results](#characterization-of-synthesized-results)
+
     
 - [DAY2 THEORY: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#day2-theory-good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
   - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
@@ -71,7 +67,7 @@
 
 
 
-# 1 THEORY: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK
+# THEORY 1: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK
 
 - [What is an RTL to GDSII flow?](#what-is-an-rtl-to-gdsii-flow)
 - [Insight into the QFN-48 Chip: Pads, Core, Die, and IP Components](#insight-into-the-qfn-48-chip-pads-core-die-and-ip-components)
@@ -101,9 +97,13 @@ Here is the OpenLANE Detailed ASIC Design Flow:
 ![image](https://github.com/afzalamu/NASSCOM-VSD-SOC-Design-Program/assets/124300839/8e45d006-cccb-429e-a3c1-35e275cf86e9)
 
 
-## DAY1 LABS : GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS 
+# LAB 1: GETTING FAMILIAR WITH OPEN SOURCE EDA TOOLS 
+- [Understanding OPENLANE Directory Structure](#understanding-openlane-directory-structure)
+- [Design Preparation Step](#design-preparation-step)
+- [Review files after design prep and run synthesis](#review-files-after-design-prep-and-run-synthesis)
+- [Characterization of Synthesized Results](#characterization-of-synthesized-results)
 
-### Understanding OPENLANE Directory Structure 
+## Understanding OPENLANE Directory Structure 
 
 Open the LINUX Terminal (By default we are in home directory)
 
@@ -147,7 +147,7 @@ cd openlane/
           - libs.tech: It contains files specific to the Tools.
   ```
   
-### Design Preparation Step
+## Design Preparation Step
 
 To enter into bash while being in the openalne dircetory use the command
 ```
@@ -175,7 +175,7 @@ After the preparation is complete, we can see a new directory with todays date i
 
 ![Screenshot (733)](https://github.com/user-attachments/assets/a1163602-9883-4dc0-a351-b5700c124a41)
 
-### Review files after design prep and run synthesis
+## Review files after design prep and run synthesis
 Now, when we open the newly created directory:
 ![Screenshot (734)](https://github.com/user-attachments/assets/2edcd507-a905-435f-a82e-b67901f5bbce)
 
@@ -205,7 +205,7 @@ It will take some time to get completed.
   * [Fossi Dial Up : Openlane Digital ASIC flow](https://www.youtube.com/live/Vhyv0eq_mLU?si=uAuQ8_DU5NJ-uKy2)
 
 
-### Characterization of Synthesized Results
+## Characterization of Synthesized Results
 
 Now, First objective after the synthesis is completed is to calculate the Flip Flop Ratio.
 
