@@ -1,10 +1,9 @@
+# NASSCOM-VSD-SOC-Design-Program
 <a href="https://afzalamu.github.io/" target="_blank">
   <button style="padding: 10px 20px; font-size: 16px; color: white; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer;">
-    Author
+    Author: Afzal Malik
   </button>
 </a>
-# NASSCOM-VSD-SOC-Design-Program
-
 ## Table of Contents
 
 - [THEORY 1: OPEN-SOURCE EDA, OPENLANE & SKY130 PDK](#theory-1-open-source-eda-openlane--sky130-pdk)
