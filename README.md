@@ -11,22 +11,10 @@
 - [THEORY 3: DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION](#theory-3-design-library-cell-using-magic-layout-and-ngspice-characterization)
 - [LAB 3: INTRODUCTION TO MAGIC AND SKY130A](#lab-3-introduction-to-magic-and-sky130a)
  
-- [DAY4: THEORETICAL CONCEPTS](#day4-theoretical-concepts)
-  - [Introduction to delay tables](#introduction-to-delay-tables)
-  - [Introduction to CTS](#introduction-to-cts)
-  - [TIMING ANALYSIS](#timing-analysis)
-- [DAY4 LABS: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE](#day4-labs-pre-layout-timing-analysis--importance-of-good-clock-tree)
-  - [Timing Modelling Using Delay Tables](#timing-modelling-using-delay-tables)
-    - [Converting the Grid Info to Track Info](#converting-the-grid-info-to-track-info)
-    - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
-    - [Introduction to Timing Libs and Steps to Include New Cell in Synthesis](#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
-    - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
-  - [Timing analysis with ideal clocks using openSTA](#timing-analysis-with-ideal-clocks-using-opensta)
-    - [Configure OpenSTA for post-synth timing analysis](#configure-opensta-for-post-synth-timing-analysis)
-    - [Steps to run CTS using TritonCTS](#steps-to-run-cts-using-tritoncts)
-  - [Timing analysis with real clocks using openSTA](#timing-analysis-with-real-clocks-using-opensta)
-    - [Steps to execute OpenSTA with right timing libraries and CTS assignment](#steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
-    - [Now if we want to include buf_1 again?](#now-if-we-want-to-include-buf_1-again)
+- [THEORY 4: DELAY TABLES, CTS, TIMING ANALYSIS](#theory-4-delay-tables-cts-timing-analysis)
+- [LAB 4: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE](#lab-4-pre-layout-timing-analysis--importance-of-good-clock-tree)
+  
+- [THEORY + LAB 5: FINAL STEPS FOR RTL2GDS USING TRITONROUTE & OPENSTA](#theory--lab-5-final-steps-for-rtl2gds-using-tritonroute--opensta)
 
 - [References](#references)
 
@@ -669,7 +657,11 @@ drc style drc(full)
 ![image](https://github.com/user-attachments/assets/4bfb7e93-8fa6-4969-915d-956d09f2b472)
 Now, we can see as we apply the contact the errors are removed.
 
-# DAY4 : THEORETICAL CONCEPTS
+# THEORY 4 : DELAY TABLES, CTS, TIMING ANALYSIS
+
+- [Introduction to delay tables](#introduction-to-delay-tables)
+- [Introduction to CTS](#introduction-to-cts)
+- [TIMING ANALYSIS](#timing-analysis)
 
 ## Introduction to delay tables
 ![image](https://github.com/user-attachments/assets/0b14100e-35e3-43fd-bde8-63f42c77cd70)
@@ -690,7 +682,20 @@ At every level , each node  is driving the same load, hence there is no skew, if
 
 ![image](https://github.com/user-attachments/assets/97ef2e04-a6e1-4b3f-a149-1a89900b20ed)
 
-# DAY4 LABS: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
+
+# LAB 4: PRE-LAYOUT TIMING ANALYSIS & IMPORTANCE OF GOOD CLOCK TREE
+
+- [Timing Modelling Using Delay Tables](#timing-modelling-using-delay-tables)
+   - [Converting the Grid Info to Track Info](#converting-the-grid-info-to-track-info)
+   - [Converting Magic Layout to Standard Cell LEF](#converting-magic-layout-to-standard-cell-lef)
+   - [Introduction to Timing Libs and Steps to Include New Cell in Synthesis](#introduction-to-timing-libs-and-steps-to-include-new-cell-in-synthesis)
+   - [Steps to configure synthesis settings to fix slack and include vsdinv](#steps-to-configure-synthesis-settings-to-fix-slack-and-include-vsdinv)
+- [Timing analysis with ideal clocks using openSTA](#timing-analysis-with-ideal-clocks-using-opensta)
+   - [Configure OpenSTA for post-synth timing analysis](#configure-opensta-for-post-synth-timing-analysis)
+   - [Steps to run CTS using TritonCTS](#steps-to-run-cts-using-tritoncts)
+- [Timing analysis with real clocks using openSTA](#timing-analysis-with-real-clocks-using-opensta)
+   - [Steps to execute OpenSTA with right timing libraries and CTS assignment](#steps-to-execute-opensta-with-right-timing-libraries-and-cts-assignment)
+   - [Now if we want to include buf_1 again?](#now-if-we-want-to-include-buf_1-again)
 
 ## TIMING MODELLING USING DELAY TABLES
 
@@ -1065,7 +1070,9 @@ set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_
 ```
 ![image](https://github.com/user-attachments/assets/f30b8304-952c-4aa1-9643-82d66f76eea5)
 
-# DAY 5: Final steps for RTL2GDS using tritonRoute and openSTA
+
+# THEORY + LAB 5: FINAL STEPS FOR RTL2GDS USING TRITONROUTE & OPENSTA
+
 * **Note:**  How to know which stage was done previously in the flow?
 * We can see it by seeing the def, current def got updated to cts in the previous stage when cts was completed.
   use the folllwoing command to check it:
