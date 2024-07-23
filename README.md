@@ -1156,19 +1156,23 @@ And runnning the flow again:
 ![Screenshot (785)](https://github.com/user-attachments/assets/d8d23b16-c108-4194-80c3-bab07850463d)
 ![Screenshot (786)](https://github.com/user-attachments/assets/81e2745f-e187-468b-a1af-019d31dba30a)
 
+Hence, we successfully got our result with 0 violations and Slack is also met.
 
 To view the final layout, use the following command:
 ```
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-07_15-00/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-07_15-00/results/routing/picorv32a.def &
 ```
-![image](https://github.com/user-attachments/assets/dde2a138-fb6a-4810-8c56-ba549a3f8220)
-![image](https://github.com/user-attachments/assets/8e8c2595-dcef-44b8-af49-82e2f7e2403b)
+![Screenshot (787)](https://github.com/user-attachments/assets/2b1f35d7-ae45-4d7d-a591-2c8b7e65ec07)
+![Screenshot (789)](https://github.com/user-attachments/assets/696b659c-cbb4-4c1e-a400-39846807ddd3)
+![image](https://github.com/user-attachments/assets/e13c5515-59f2-4b0b-8690-f3919585aed1)
+
 
 
 * To view the Parsitic Extraction file, Go to the follwoing directory:
-  ![image](https://github.com/user-attachments/assets/2e71d15f-dd34-4284-ad00-fb56b1d803e4)
+![image](https://github.com/user-attachments/assets/371e6d4d-29b8-4166-af05-12cd1810bfef)
+
 Also verilog files were modified after certain stages, see here:
-![image](https://github.com/user-attachments/assets/5180e7c4-d187-4a1b-adf4-1af74519ba8f)
+![image](https://github.com/user-attachments/assets/391eb45b-aea2-44e6-acbd-9ee52f358d17)
 
 
 # References
