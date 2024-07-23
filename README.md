@@ -8,33 +8,9 @@
 - [THEORY 2: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS](#theory-2-good-floorplan-vs-bad-floorplan--introduction-to-library-cells)
 - [LAB 2: FLOORPLANNING & PLACEMENT](#lab-2-floorplanning--placement)
 
-    
-- [DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION](#day3-theory--design-library-cell-using-magic-layout-and-ngspice-characterization)
-  - [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
-  - [INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS](#inception-of-layout--cmos-fabrication-process)
-    - [CREATE ACTIVE REGIONS](#create-active-regions)
-    - [FORMATION OF WELLS](#formation-of-wells)
-    - [FORMATION OF GATE TERMINALS](#formation-of-gate-terminals)
-    - [LIGHTLY DOPED DRAIN (LDD) FORMATION](#lightly-doped-drain-ldd-formation)
-    - [SOURCE DRAIN FORMATION](#source-drain-formation)
-    - [LOCAL INTERCONNECT FORMATION](#local-interconnect-formation)
-    - [HIGHER LEVEL METAL FORMATION](#higher-level-metal-formation) 
-- [DAY3 LABS :](#day3-labs-)
-  - [HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?](#how-to-make-changes-while-being-in-then-flow)
-  - [HOW TO GIT CLONE THE "vsdstdcelldesign"](#how-to-git-clone-the-vsdstdcelldesign)
-  - [INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER](#introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
-  - [TO CREATE STANDARD CELL LAYOUT IN MAGIC](#to-create-standard-cell-layout-in-magic)
-  - [TO EXTRACT THE NETLIST IN MAGIC](#to-extract-the-netlist-in-magic)
-  - [SKY130 TECH FILE LABS](#sky130-tech-file-labs)
-    - [CREATE SPICEDECK USING SKY130 TECH](#create-spicedeck-using-sky130-tech)
-    - [CHARACTERIZE INVERTER USING SKY130 TECH FILES](#characterize-inverter-using-sky130-tech-files)
-  - [Introduction to Magic Tools and DRC Rules](#introduction-to-magic-tools-and-drc-rules)
-  - [Introduction to SKY130 PDK](#introduction-to-sky130-pdk)
-  - [Introduction to Magic & Steps to Load SKY130 Tech Rules](#introduction-to-magic--steps-to-load-sky130-tech-rules)
-  - [Lab Exercise to Fix Poly-9 Error in SKY130 Tech File](#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
-  - [Lab Challenge Exercise to Describe DRC Error as Geometrical Construct](#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
-  - [Lab Challenge to Find Missing or Incorrect Rules and Fix Them](#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
-
+- [THEORY 3: DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION](#theory-3-design-library-cell-using-magic-layout-and-ngspice-characterization)
+- [LAB 3: INTRODUCTION TO MAGIC AND SKY130A](#lab-3-introduction-to-magic-and-sky130a)
+ 
 - [DAY4: THEORETICAL CONCEPTS](#day4-theoretical-concepts)
   - [Introduction to delay tables](#introduction-to-delay-tables)
   - [Introduction to CTS](#introduction-to-cts)
@@ -226,13 +202,7 @@ we have the synthesis results stored here now.
 # THEORY 2: GOOD FLOORPLAN VS BAD FLOORPLAN & INTRODUCTION TO LIBRARY CELLS
 
 - [CHIP FLOORPLANNING CONSIDERATIONS](#chip-floorplanning-considerations)
-    - [UTILIZATION FACTOR AND ASPECT RATIO](#utilization-factor-and-aspect-ratio)
-    - [CONCEPT OF PREPLACED CELLS](#concept-of-preplaced-cells)
-    - [CONCEPT OF DECOUPLING CAPACITOR](#concept-of-decoupling-capacitor)
-    - [CONCEPT OF POWER PLANNING](#concept-of-power-planning)
 - [LIBRARY BINDING AND PLACEMENTS](#library-binding-and-placements)
-    - [Netlist binding and initial place design](#netlist-binding-and-initial-place-design)
-    - [Optimize placement using estimated wire-length and capacitance](#optimize-placement-using-estimated-wire-length-and-capacitance)
 - [CELL DESIGN AND CHARACTERISATION FLOWS](#cell-design-and-characterisation-flows)
 - [GENERAL TIMING CHARACTERISATION PARAMETERS](#general-timing-characterisation-parameters)
 
@@ -409,7 +379,17 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ![image](https://github.com/user-attachments/assets/cb1d52a8-fb7f-4a6d-abe6-37a4bdc02efd)
 
-# DAY3 THEORY : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
+# THEORY 3 : DESIGN LIBRARY CELL USING MAGIC LAYOUT AND NGSPICE CHARACTERIZATION
+
+- [SPICE DECK CREATION FOR CMOS INVERTER](#spice-deck-creation-for-cmos-inverter)
+- [INCEPTION OF LAYOUT & CMOS FABRICATION PROCESS](#inception-of-layout--cmos-fabrication-process)
+    - [CREATE ACTIVE REGIONS](#create-active-regions)
+    - [FORMATION OF WELLS](#formation-of-wells)
+    - [FORMATION OF GATE TERMINALS](#formation-of-gate-terminals)
+    - [LIGHTLY DOPED DRAIN (LDD) FORMATION](#lightly-doped-drain-ldd-formation)
+    - [SOURCE DRAIN FORMATION](#source-drain-formation)
+    - [LOCAL INTERCONNECT FORMATION](#local-interconnect-formation)
+    - [HIGHER LEVEL METAL FORMATION](#higher-level-metal-formation) 
 
 ## SPICE DECK CREATION FOR CMOS INVERTER
 Spice deck basically Netlist having the connectivity information, Input to be provided, Output Tap points and much more.
@@ -472,9 +452,22 @@ CMOS circuit is a very Robust device, seee the below image:
 ![Presentation8](https://github.com/user-attachments/assets/45c62a3a-96ef-454a-97b3-a1a61bec9723)
 
 
+# LAB 3: INTRODUCTION TO MAGIC AND SKY130A 
+- [HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?](#how-to-make-changes-while-being-in-then-flow)
+- [HOW TO GIT CLONE THE "vsdstdcelldesign"](#how-to-git-clone-the-vsdstdcelldesign)
+- [INTRODUCTION TO SKY130 BASIC LAYERS LAYOUT AND LEF USING INVERTER](#introduction-to-sky130-basic-layers-layout-and-lef-using-inverter)
+- [TO CREATE STANDARD CELL LAYOUT IN MAGIC](#to-create-standard-cell-layout-in-magic)
+- [TO EXTRACT THE NETLIST IN MAGIC](#to-extract-the-netlist-in-magic)
+- [SKY130 TECH FILE LABS](#sky130-tech-file-labs)
+   - [CREATE SPICEDECK USING SKY130 TECH](#create-spicedeck-using-sky130-tech)
+   - [CHARACTERIZE INVERTER USING SKY130 TECH FILES](#characterize-inverter-using-sky130-tech-files)
+- [Introduction to Magic Tools and DRC Rules](#introduction-to-magic-tools-and-drc-rules)
+- [Introduction to SKY130 PDK](#introduction-to-sky130-pdk)
+- [Introduction to Magic & Steps to Load SKY130 Tech Rules](#introduction-to-magic--steps-to-load-sky130-tech-rules)
+- [Lab Exercise to Fix Poly-9 Error in SKY130 Tech File](#lab-exercise-to-fix-poly-9-error-in-sky130-tech-file)
+- [Lab Challenge Exercise to Describe DRC Error as Geometrical Construct](#lab-challenge-exercise-to-describe-drc-error-as-geometrical-construct)
+- [Lab Challenge to Find Missing or Incorrect Rules and Fix Them](#lab-challenge-to-find-missing-or-incorrect-rules-and-fix-them)
 
-
-## DAY3 LABS :
 
 ## HOW TO MAKE CHANGES WHILE BEING IN THEN FLOW?
 
