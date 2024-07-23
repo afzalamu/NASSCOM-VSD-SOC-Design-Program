@@ -1,3 +1,8 @@
+<a href="https://afzalamu.github.io/" target="_blank">
+  <button style="padding: 10px 20px; font-size: 16px; color: white; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer;">
+    Author
+  </button>
+</a>
 # NASSCOM-VSD-SOC-Design-Program
 
 ## Table of Contents
