@@ -812,38 +812,7 @@ Open the tracks.info file to learn more about the horizontal and vertical tracks
   From the figure above, it is evident that the synthesis was successful, with a total of 1554 instances of our vsdinverter. Therefore, this stage has been completed successfully.
   From the above figure we can see the worst slack is -23.89 and total negative slack is -711.59.
 
-  ## Steps to configure synthesis settings to fix slack and include vsdinv
-  Chip area for module '\picorv32a': 147712.918400
-  See the Readme File in configuration directory:
-  ![image](https://github.com/user-attachments/assets/f6c21b7f-79ff-4620-965b-03a56a6e57d9)
 
-  - Commands to view and change parameters to improve timing and run synthesis:
-
-| Step | Command | Description |
-|------|---------|-------------|
-| 1 | `prep -design picorv32a -tag 24-03_10-03 -overwrite` | Prepare the design for updating variables |
-| 2 | `set lefs [glob $::env(DESIGN_DIR)/src/*.lef]` | Include newly added LEF files in the OpenLane flow |
-| 3 | `add_lefs -src $lefs` | Merge the LEF files |
-| 4 | `echo $::env(SYNTH_STRATEGY)` | Display the current value of the `SYNTH_STRATEGY` variable |
-| 5 | `set ::env(SYNTH_STRATEGY) "DELAY 3"` | Set a new value for the `SYNTH_STRATEGY` variable |
-| 6 | `echo $::env(SYNTH_BUFFERING)` | Check if `SYNTH_BUFFERING` is enabled by displaying its current value |
-| 7 | `echo $::env(SYNTH_SIZING)` | Display the current value of the `SYNTH_SIZING` variable |
-| 8 | `set ::env(SYNTH_SIZING) 1` | Set a new value for the `SYNTH_SIZING` variable |
-| 9 | `echo $::env(SYNTH_DRIVING_CELL)` | Check the current value of `SYNTH_DRIVING_CELL` to ensure it's the correct cell |
-| 10 | `run_synthesis` | Run the synthesis process after the design is prepared |
-
-![image](https://github.com/user-attachments/assets/bdad3276-f68e-4e2f-8ecc-7e005d80fd94)
-
-![image](https://github.com/user-attachments/assets/cc2b649c-dc83-4cbb-8bb6-00f9e4349733)
-
-Now, tns and wns is zero and  Chip area for module '\picorv32a': 181730.544000 is increased now.
-Now ```run_floorplan```
-![image](https://github.com/user-attachments/assets/674001ab-313e-4dcf-aa12-12587ad8481d)
-As we can see from the above image, it is failed.
-So, run these:
-
-
-```h```````````````````````````````````````````````````````````````````````````````````````````````````````````h ```
 As we have completed the synthesis stage now we complete the floorplan using the following command:
 ```
 init_floorplan
@@ -1160,9 +1129,37 @@ run_routing
 ![image](https://github.com/user-attachments/assets/8fd78cb2-78cc-4dc5-80bd-532b9fd987e3)
 The routing has been completed with zero violations, but there is a negative slack, we need to eleiminate the engaticve slack for successful completion of the Physical Design Flow.
 
-To view the final layout, us ethe following command:
+## Steps to configure synthesis settings to fix slack and include vsdinv
+  See the Readme File in configuration directory:
+  ![image](https://github.com/user-attachments/assets/f6c21b7f-79ff-4620-965b-03a56a6e57d9)
+
+  - Commands to view and change parameters to improve timing and run synthesis:
+
+| Step | Command | Description |
+|------|---------|-------------|
+| 1 | `prep -design picorv32a -tag 24-03_10-03 -overwrite` | Prepare the design for updating variables |
+| 2 | `set lefs [glob $::env(DESIGN_DIR)/src/*.lef]` | Include newly added LEF files in the OpenLane flow |
+| 3 | `add_lefs -src $lefs` | Merge the LEF files |
+| 4 | `echo $::env(SYNTH_STRATEGY)` | Display the current value of the `SYNTH_STRATEGY` variable |
+| 5 | `set ::env(SYNTH_STRATEGY) "DELAY 3"` | Set a new value for the `SYNTH_STRATEGY` variable |
+| 6 | `echo $::env(SYNTH_BUFFERING)` | Check if `SYNTH_BUFFERING` is enabled by displaying its current value |
+| 7 | `echo $::env(SYNTH_SIZING)` | Display the current value of the `SYNTH_SIZING` variable |
+| 8 | `set ::env(SYNTH_SIZING) 1` | Set a new value for the `SYNTH_SIZING` variable |
+| 9 | `echo $::env(SYNTH_DRIVING_CELL)` | Check the current value of `SYNTH_DRIVING_CELL` to ensure it's the correct cell |
+| 10 | `run_synthesis` | Run the synthesis process after the design is prepared |
+
+And runnning the flow again:
+![Screenshot (781)](https://github.com/user-attachments/assets/349bb576-85ac-4861-9abb-b057b6ee1c3e)
+![Screenshot (782)](https://github.com/user-attachments/assets/d4bea99e-b6b5-47a9-a46a-fc6616e66db4)
+![Screenshot (783)](https://github.com/user-attachments/assets/e0587d11-9188-43bf-9975-6a6d410bbda4)
+![Screenshot (784)](https://github.com/user-attachments/assets/19d76407-0b45-4035-928a-0100a3b7754e)
+![Screenshot (785)](https://github.com/user-attachments/assets/d8d23b16-c108-4194-80c3-bab07850463d)
+![Screenshot (786)](https://github.com/user-attachments/assets/81e2745f-e187-468b-a1af-019d31dba30a)
+
+
+To view the final layout, use the following command:
 ```
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/20-07_16-44/results/routing/picorv32a.def &
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-07_15-00/tmp/merged.lef def read /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/22-07_15-00/results/routing/picorv32a.def &
 ```
 ![image](https://github.com/user-attachments/assets/dde2a138-fb6a-4810-8c56-ba549a3f8220)
 ![image](https://github.com/user-attachments/assets/8e8c2595-dcef-44b8-af49-82e2f7e2403b)
